@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
@@ -14,6 +15,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         setMap()
+        
     }
     
     @IBOutlet weak var mapOutlet: MKMapView!
@@ -21,6 +23,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func setMap() {
         
         let annotation = MKPointAnnotation()
+        let lm = CLLocationManager()
+        
+        lm.requestWhenInUseAuthorization()
+        lm.startUpdatingLocation()
         
         annotation.coordinate = CLLocationCoordinate2DMake(35.681236, 139.767125)
         
