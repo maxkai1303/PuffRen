@@ -9,31 +9,56 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setMap()
-        
-    }
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapOutlet: MKMapView!
     
-    func setMap() {
+    let locationManager = CLLocationManager()
+    
+    override func viewDidLoad() {
         
-        let annotation = MKPointAnnotation()
-        let lm = CLLocationManager()
+        super.viewDidLoad()
         
-        lm.requestWhenInUseAuthorization()
-        lm.startUpdatingLocation()
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-        annotation.coordinate = CLLocationCoordinate2DMake(35.681236, 139.767125)
+        mapOutlet.delegate = self
+        mapOutlet.showsUserLocation = true
+        mapOutlet.userTrackingMode = .follow
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
-        annotation.title = "東京駅"
-        annotation.subtitle = "Tokyo Station"
+        super.viewDidAppear(animated)
         
-        self.mapOutlet.addAnnotation(annotation)
+        locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.startUpdatingLocation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+            
+        locationManager.stopUpdatingLocation()
+        
+        }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+        switch manager.authorizationStatus {
+        
+        case .authorizedAlways, .authorizedWhenInUse:
+            
+            print("使用者同意了")
+        
+            locationManager.startUpdatingLocation()
+            
+        default:
+            
+            print("使用者不同意")
+            
+            break
+        }
     }
     
 }
