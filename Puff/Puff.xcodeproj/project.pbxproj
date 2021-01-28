@@ -55,9 +55,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245BF4A225C2AAD100CC3CD9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				457A970B25B9465D00A59014 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		245BF4A325C2AAE200CC3CD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				457A970625B9465C00A59014 /* ViewController.swift */,
+				454DEF0725C1B47300835B8B /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		452BCBBE25BEBE3900838E06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4580C11B25C29DFD003E2814 /* Map.storyboard */,
+				457A970825B9465C00A59014 /* Main.storyboard */,
+				457A970D25B9465D00A59014 /* LaunchScreen.storyboard */,
 				452BCBC025BEBE4200838E06 /* Nib */,
 			);
 			path = View;
@@ -101,14 +121,10 @@
 			children = (
 				457A970225B9465C00A59014 /* AppDelegate.swift */,
 				457A970425B9465C00A59014 /* SceneDelegate.swift */,
-				457A970625B9465C00A59014 /* ViewController.swift */,
-				4580C11B25C29DFD003E2814 /* Map.storyboard */,
-				457A970825B9465C00A59014 /* Main.storyboard */,
-				454DEF0725C1B47300835B8B /* MapViewController.swift */,
+				245BF4A325C2AAE200CC3CD9 /* Controller */,
+				245BF4A225C2AAD100CC3CD9 /* Resource */,
 				457A974025BEB66B00A59014 /* Extension */,
 				452BCBBE25BEBE3900838E06 /* View */,
-				457A970B25B9465D00A59014 /* Assets.xcassets */,
-				457A970D25B9465D00A59014 /* LaunchScreen.storyboard */,
 				457A971025B9465D00A59014 /* Info.plist */,
 			);
 			path = Puff;
