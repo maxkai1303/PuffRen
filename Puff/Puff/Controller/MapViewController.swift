@@ -210,28 +210,28 @@ extension MapViewController: MKMapViewDelegate {
         
         return nil
         
-//        if let temp = annotation as? MKAnnotation {
-//
-//            var storeMap = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
-//
-//            if storeMap == nil {
-//
-//                storeMap = MKAnnotationView(annotation: temp, reuseIdentifier: "pin")
-//
-//                storeMap?.image = UIImage(named: "placeholder")
-//
-//                storeMap?.canShowCallout = true
-//
-//                storeMap?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-//
-//            } else {
-//
-//                storeMap?.annotation = annotation
-//            }
-//
-//            return storeMap
-//
-//        }
+        if let temp = annotation as? MKAnnotation {
+
+            var storeMap = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
+
+            if storeMap == nil {
+
+                storeMap = MKAnnotationView(annotation: temp, reuseIdentifier: "pin")
+
+                storeMap?.image = UIImage(named: "placeholder")
+
+                storeMap?.canShowCallout = true
+
+                storeMap?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+
+            } else {
+
+                storeMap?.annotation = annotation
+            }
+
+            return storeMap
+
+        }
     }
     
     func mapView(_ mapView: MKMapView,annotationView view: MKAnnotationView,calloutAccessoryControlTapped control: UIControl) {
