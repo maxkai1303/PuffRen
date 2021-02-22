@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCollectionViewCell" id="gTV-IL-0wX" customClass="ItemCollectionViewCell" customModule="Puff" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="221.5"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="171" height="221.5"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dark Chocolate Cream Puff.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysn-RO-9yE">
+                        <rect key="frame" x="12" y="12" width="147" height="137.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="香草奶油焦糖泡芙" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-zf-e2F" customClass="PFLabel" customModule="Puff" customModuleProvider="target">
+                        <rect key="frame" x="12" y="161.5" width="147" height="48"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomPadding">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.98275798560000005" green="0.94718331099999997" blue="0.79997652770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="Qnf-zf-e2F" firstAttribute="top" secondItem="ysn-RO-9yE" secondAttribute="bottom" constant="12" id="SMT-PY-IEv"/>
+                <constraint firstAttribute="trailing" secondItem="Qnf-zf-e2F" secondAttribute="trailing" constant="12" id="VV0-Lo-OKB"/>
+                <constraint firstItem="Qnf-zf-e2F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="VpV-EL-UUf"/>
+                <constraint firstItem="ysn-RO-9yE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="Xb1-tL-zhA"/>
+                <constraint firstAttribute="trailing" secondItem="ysn-RO-9yE" secondAttribute="trailing" constant="12" id="YDX-EC-hjx"/>
+                <constraint firstAttribute="bottom" secondItem="Qnf-zf-e2F" secondAttribute="bottom" constant="12" id="aKj-WJ-dW0"/>
+                <constraint firstItem="ysn-RO-9yE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="g3i-az-pL7"/>
+            </constraints>
+            <size key="customSize" width="339" height="383"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="itemImageView" destination="ysn-RO-9yE" id="N0g-el-0eZ"/>
+                <outlet property="itemNameLabel" destination="Qnf-zf-e2F" id="Oy3-rA-4Mi"/>
+            </connections>
+            <point key="canvasLocation" x="342.75362318840581" y="208.92857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="Qnf-zf-e2F">
+            <size key="intrinsicContentSize" width="163.5" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Dark Chocolate Cream Puff.png" width="390" height="422"/>
+    </resources>
+</document>

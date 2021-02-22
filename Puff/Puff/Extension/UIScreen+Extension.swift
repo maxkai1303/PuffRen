@@ -18,4 +18,5 @@ extension UIScreen {
         
         return self.main.bounds.width
     }
+
 }

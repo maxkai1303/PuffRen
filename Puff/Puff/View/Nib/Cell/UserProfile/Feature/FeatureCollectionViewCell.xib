@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeatureCollectionViewCell" id="gTV-IL-0wX" customClass="FeatureCollectionViewCell" customModule="Puff" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfZ-lv-dZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單查詢訂單查詢訂單查詢" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-Sg-eY0">
+                                <rect key="frame" x="16" y="27" width="98" height="76"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1kX-Sg-eY0" secondAttribute="bottom" constant="16" id="JOJ-nH-kSE"/>
+                            <constraint firstAttribute="trailing" secondItem="1kX-Sg-eY0" secondAttribute="trailing" constant="16" id="OPj-7L-Ysd"/>
+                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="centerY" secondItem="XfZ-lv-dZ3" secondAttribute="centerY" id="krg-X2-yeJ"/>
+                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="leading" secondItem="XfZ-lv-dZ3" secondAttribute="leading" constant="16" id="oiV-Bp-mnd"/>
+                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XfZ-lv-dZ3" secondAttribute="top" constant="16" id="ops-AZ-C5I"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="XfZ-lv-dZ3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JJN-8r-WvS"/>
+                <constraint firstItem="XfZ-lv-dZ3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NoL-Fk-MGO"/>
+                <constraint firstAttribute="bottom" secondItem="XfZ-lv-dZ3" secondAttribute="bottom" id="d4H-XA-APP"/>
+                <constraint firstAttribute="trailing" secondItem="XfZ-lv-dZ3" secondAttribute="trailing" id="q1K-Fd-eHa"/>
+            </constraints>
+            <size key="customSize" width="132" height="139"/>
+            <connections>
+                <outlet property="nameLabel" destination="1kX-Sg-eY0" id="nXV-4g-Aah"/>
+            </connections>
+            <point key="canvasLocation" x="197.10144927536234" y="123.21428571428571"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

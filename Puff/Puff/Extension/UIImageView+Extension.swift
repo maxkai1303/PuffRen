@@ -9,9 +9,9 @@ import UIKit
 
 extension UIImageView {
     
-    func addTapAction(sender: Any, selector: Selector) {
+    func addTapAction(sender: Any, actioon: Selector) {
         
-        let tapGestureRecpgnozer = UITapGestureRecognizer(target: sender, action: selector)
+        let tapGestureRecpgnozer = UITapGestureRecognizer(target: sender, action: actioon)
         
         self.isUserInteractionEnabled = true
         
