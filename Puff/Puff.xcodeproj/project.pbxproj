@@ -129,13 +129,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		240DFACB25D10EEE00AD5350 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		2420B57325D0FCF80022EDAD /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +294,6 @@
 				24F7482F25E246D4009CDA35 /* Helper */,
 				457A974025BEB66B00A59014 /* Extension */,
 				240DFACA25D10EE600AD5350 /* Model */,
-				240DFACB25D10EEE00AD5350 /* Manager */,
 				240DFAB725D1018200AD5350 /* Provider */,
 				240DFAC925D10ECD00AD5350 /* Startup */,
 				245BF4A325C2AAE200CC3CD9 /* Controller */,

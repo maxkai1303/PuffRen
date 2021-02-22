@@ -208,7 +208,7 @@ extension MapViewController: MKMapViewDelegate {
             return nil
         }
         
-        return nil
+//        return nil
         
         if let temp = annotation as? MKAnnotation {
 
@@ -218,7 +218,7 @@ extension MapViewController: MKMapViewDelegate {
 
                 storeMap = MKAnnotationView(annotation: temp, reuseIdentifier: "pin")
 
-                storeMap?.image = UIImage(named: "placeholder")
+                storeMap?.image = UIImage(named: "Placeholder")
 
                 storeMap?.canShowCallout = true
 
