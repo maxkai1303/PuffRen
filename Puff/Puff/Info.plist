@@ -65,6 +65,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>我ＴＭ取用你位置</string>
+	<string>是否同意在地圖上顯示位置資訊</string>
 </dict>
 </plist>
