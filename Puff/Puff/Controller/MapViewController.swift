@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: BaseViewController {
     
     @IBOutlet weak var mapOutlet: MKMapView!
     
@@ -28,21 +28,31 @@ class MapViewController: UIViewController {
         mapOutlet.showsUserLocation = true
         mapOutlet.userTrackingMode = .follow
         
-        setPoint()
         setMapView()
         setupUserTrackingButtonAndScaleView()
+    }
+    
+    override var navigationBarTitle: String {
         
+        return "攤商地圖"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        locationManager.requestAlwaysAuthorization()
+        
+        locationManager.requestLocation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestLocation()
+        setPoint()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
         locationManager.stopUpdatingLocation()
     }
@@ -160,9 +170,9 @@ class MapViewController: UIViewController {
                                      scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)])
     }
     
-    func openMap(latitude: Double, longitude: Double) {
+    func openMap(location: CLLocationCoordinate2D, targetName: String?) {
         
-        let targetLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let targetLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
         //初始化使用MKPlacemark
         let targetPlacemark = MKPlacemark(coordinate: targetLocation)
         
@@ -171,6 +181,8 @@ class MapViewController: UIViewController {
         let userMapItem = MKMapItem.forCurrentLocation()
         
         let routes = [userMapItem,targetItem]
+        
+        targetItem.name = targetName ?? "我愛泡芙人"
         
         MKMapItem.openMaps(with: routes, launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
     }
@@ -200,46 +212,28 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        let userLocation = locationManager.location?.coordinate
+        if annotation.isKind(of: MKUserLocation.self) { return nil }
         
-        if annotation.coordinate.latitude == userLocation?.latitude
-            && annotation.coordinate.longitude == userLocation?.longitude {
-            
-            return nil
-        }
+        let annotationIdentifier = "pin"
         
-//        return nil
+        var storeMap = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
         
-        if let temp = annotation as? MKAnnotation {
-
-            var storeMap = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
-
-            if storeMap == nil {
-
-                storeMap = MKAnnotationView(annotation: temp, reuseIdentifier: "pin")
-
-                storeMap?.image = UIImage(named: "Placeholder")
-
-                storeMap?.canShowCallout = true
-
-                storeMap?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-
-            } else {
-
-                storeMap?.annotation = annotation
-            }
-
-            return storeMap
-
-        }
+        storeMap = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+        
+        storeMap?.image = UIImage(named: "Placeholder")
+        
+        storeMap?.canShowCallout = true
+        
+        storeMap?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        
+        return storeMap
     }
     
     func mapView(_ mapView: MKMapView,annotationView view: MKAnnotationView,calloutAccessoryControlTapped control: UIControl) {
         
         guard let placemark = view.annotation as? MKPointAnnotation else { return }
         
-        openMap(latitude: placemark.coordinate.latitude, longitude: placemark.coordinate.longitude)
-        
+        openMap(location: placemark.coordinate, targetName: placemark.title)
     }
 }
 

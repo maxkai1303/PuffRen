@@ -29,6 +29,7 @@
 		24B1FA3A25E3C40100186AB6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B1FA3925E3C40100186AB6 /* Map.storyboard */; };
 		24B1FA4025E3C48B00186AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B1FA3F25E3C48B00186AB6 /* Main.storyboard */; };
 		24B1FA4825E3C4D000186AB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B1FA4725E3C4D000186AB6 /* LaunchScreen.storyboard */; };
+		24CC5B6325E509D00018B542 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC5B6225E509CF0018B542 /* MapKit.framework */; };
 		24F7483125E246E9009CDA35 /* ViewAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */; };
 		24F7485125E2F045009CDA35 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */; };
 		24F7486A25E2FC12009CDA35 /* ItemDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7486825E2FC12009CDA35 /* ItemDetailTableViewCell.swift */; };
@@ -71,6 +72,7 @@
 		24B1FA3925E3C40100186AB6 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		24B1FA3F25E3C48B00186AB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Puff/View/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		24B1FA4725E3C4D000186AB6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		24CC5B6225E509CF0018B542 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimationHelper.swift; sourceTree = "<group>"; };
 		24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		24F7486825E2FC12009CDA35 /* ItemDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CC5B6325E509D00018B542 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +214,14 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
+		24CC5B6125E509CF0018B542 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24CC5B6225E509CF0018B542 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24F7482F25E246D4009CDA35 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +288,7 @@
 			children = (
 				457A970125B9465C00A59014 /* Puff */,
 				457A970025B9465C00A59014 /* Products */,
+				24CC5B6125E509CF0018B542 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

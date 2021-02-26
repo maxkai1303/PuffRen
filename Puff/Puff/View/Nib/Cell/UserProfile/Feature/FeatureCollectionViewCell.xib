@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,20 +20,28 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfZ-lv-dZ3">
                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單查詢訂單查詢訂單查詢" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-Sg-eY0">
-                                <rect key="frame" x="16" y="27" width="98" height="76"/>
-                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單查詢" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-Sg-eY0">
+                                <rect key="frame" x="0.0" y="69" width="130" height="20"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="14"/>
+                                <color key="textColor" name="Text"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ButtomImage" translatesAutoresizingMaskIntoConstraints="NO" id="SY9-rr-Jrt">
+                                <rect key="frame" x="32.5" y="0.0" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SY9-rr-Jrt" secondAttribute="height" multiplier="1:1" id="dQ1-DU-Fp4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1kX-Sg-eY0" secondAttribute="bottom" constant="16" id="JOJ-nH-kSE"/>
-                            <constraint firstAttribute="trailing" secondItem="1kX-Sg-eY0" secondAttribute="trailing" constant="16" id="OPj-7L-Ysd"/>
-                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="centerY" secondItem="XfZ-lv-dZ3" secondAttribute="centerY" id="krg-X2-yeJ"/>
-                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="leading" secondItem="XfZ-lv-dZ3" secondAttribute="leading" constant="16" id="oiV-Bp-mnd"/>
-                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XfZ-lv-dZ3" secondAttribute="top" constant="16" id="ops-AZ-C5I"/>
+                            <constraint firstItem="SY9-rr-Jrt" firstAttribute="width" secondItem="XfZ-lv-dZ3" secondAttribute="width" multiplier="0.5" id="2KA-pb-vtY"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1kX-Sg-eY0" secondAttribute="bottom" constant="8" id="JOJ-nH-kSE"/>
+                            <constraint firstAttribute="trailing" secondItem="1kX-Sg-eY0" secondAttribute="trailing" id="OPj-7L-Ysd"/>
+                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="top" secondItem="SY9-rr-Jrt" secondAttribute="bottom" constant="4" id="TJh-NX-M01"/>
+                            <constraint firstItem="SY9-rr-Jrt" firstAttribute="top" secondItem="XfZ-lv-dZ3" secondAttribute="top" id="hWQ-Er-8HX"/>
+                            <constraint firstItem="1kX-Sg-eY0" firstAttribute="leading" secondItem="XfZ-lv-dZ3" secondAttribute="leading" id="oiV-Bp-mnd"/>
+                            <constraint firstItem="SY9-rr-Jrt" firstAttribute="centerX" secondItem="XfZ-lv-dZ3" secondAttribute="centerX" id="uvd-js-9R3"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -53,8 +61,9 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ButtomImage" width="128" height="128"/>
+        <namedColor name="Text">
+            <color red="0.20000000298023224" green="0.097999997437000275" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

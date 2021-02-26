@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,8 +13,41 @@
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeatureHeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="FeatureHeaderCollectionReusableView" customModule="Puff" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vu6-mv-EKa">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-y6-8H8">
+                            <rect key="frame" x="24" y="14" width="272" height="22.5"/>
+                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                            <color key="textColor" name="Text"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="MQd-y6-8H8" firstAttribute="leading" secondItem="vu6-mv-EKa" secondAttribute="leading" constant="24" id="5Fn-DJ-Zci"/>
+                        <constraint firstAttribute="trailing" secondItem="MQd-y6-8H8" secondAttribute="trailing" constant="24" id="G64-rU-3iu"/>
+                        <constraint firstItem="MQd-y6-8H8" firstAttribute="centerY" secondItem="vu6-mv-EKa" secondAttribute="centerY" id="iPh-St-dWi"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vu6-mv-EKa" secondAttribute="bottom" id="AKF-hk-u9g"/>
+                <constraint firstItem="vu6-mv-EKa" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="EoX-K3-SVU"/>
+                <constraint firstItem="vu6-mv-EKa" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="c2L-7k-BWq"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="vu6-mv-EKa" secondAttribute="trailing" id="xny-0t-70I"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="MQd-y6-8H8" id="ES7-5x-ERT"/>
+            </connections>
             <point key="canvasLocation" x="-146" y="94"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <namedColor name="Text">
+            <color red="0.20000000298023224" green="0.097999997437000275" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

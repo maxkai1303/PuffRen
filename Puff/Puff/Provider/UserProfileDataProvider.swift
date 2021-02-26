@@ -9,32 +9,41 @@ import Foundation
 
 class UserProfileDataProvider {
     
-    enum DataType: Int, CaseIterable{
+    enum DataType: CaseIterable {
         
-        case userProfile = 0
+        static var allCases: [UserProfileDataProvider.DataType] {
+            
+            return [.userProfile,
+                    memberFeature("會員功能", MemberFeature.allCases),
+                    storeFeature("攤主功能", StoreFeature.allCases)]
+        }
         
-        case memberFeature
+        case userProfile
         
-        case storeFeature
+        case memberFeature(String ,[MemberFeature])
+        
+        case storeFeature(String, [StoreFeature])
     }
     
-    enum MemberFeature: Int, CaseIterable {
+    enum MemberFeature: String, CaseIterable {
         
-        case record = 0
+        case record = "訂單查詢"
         
-        case edit
+        case edit = "會員資料修改"
         
-        case event
+        case event = "會員專屬活動"
         
-        case quickResponseCode
+        case quickResponseCode = "QRCode"
     }
     
-    enum StoreFeature: Int, CaseIterable {
+    enum StoreFeature: String, CaseIterable {
         
-        case stateReport = 0
+        case stateReport = "營業狀況回報"
         
-        case recordReport
+        case recordReport = "營業紀錄回報"
         
-        case quickResponseCode
+        case edit = "查看營業紀錄"
+        
+        case quickResponseCode = "QRCode"
     }
 }

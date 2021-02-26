@@ -8,7 +8,7 @@
 import UIKit
 
 class ItemDetailViewController: BaseViewController {
-
+    
     @IBOutlet weak var tableView: UITableView! {
         
         didSet {

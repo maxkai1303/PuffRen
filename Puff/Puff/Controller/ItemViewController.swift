@@ -73,6 +73,11 @@ class ItemViewController: BaseViewController {
         return SegmentedControlState.init(rawValue: segmentedControl.selectedSegmentIndex) ?? .general
     }
     
+    override var navigationBarTitle: String {
+        
+        return "商品列表"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     

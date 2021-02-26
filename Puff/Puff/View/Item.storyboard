@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item View Controller-->
+        <!--商品列表-->
         <scene sceneID="tEI-2U-kNq">
             <objects>
-                <viewController id="suh-GB-Dee" customClass="ItemViewController" customModule="Puff" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="商品列表" id="suh-GB-Dee" customClass="ItemViewController" customModule="Puff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LeH-qV-AhB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,6 @@
                             <constraint firstItem="rDB-kK-1lf" firstAttribute="leading" secondItem="HyA-wD-hXA" secondAttribute="leading" id="xJg-qy-emH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GoG-Tf-cbr"/>
                     <connections>
                         <outlet property="collectionView" destination="GTH-Mz-UUH" id="XLN-Wt-7IH"/>
                         <outlet property="segmentedControl" destination="rDB-kK-1lf" id="0u8-w9-7k6"/>
@@ -112,8 +111,11 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="sL8-z5-xau"/>
                                         </constraints>
                                         <state key="normal" title="加入購物車">
-                                            <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                            <color key="titleColor" name="Text"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableCutRound" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -159,10 +161,10 @@
         <namedColor name="Main">
             <color red="1" green="0.65100002288818359" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Text">
+            <color red="0.20000000298023224" green="0.097999997437000275" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
