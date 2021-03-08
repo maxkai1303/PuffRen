@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="suh-GB-Dee">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="suh-GB-Dee">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -147,11 +147,22 @@
                         <outlet property="headerView" destination="7lD-OE-Muj" id="W7y-uv-AFM"/>
                         <outlet property="imageView" destination="79X-dU-F64" id="94o-Ol-b8a"/>
                         <outlet property="tableView" destination="wTz-O7-ZA8" id="gTx-ra-Gkc"/>
+                        <segue destination="6uR-aQ-PG6" kind="show" id="kOH-JM-W2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CQ-Qb-ohm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1537.68115942029" y="-204.24107142857142"/>
+        </scene>
+        <!--AddCar-->
+        <scene sceneID="feJ-9E-NuX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCar" id="6uR-aQ-PG6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yBg-xr-GuI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pe1-nC-tAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2122" y="-204"/>
         </scene>
     </scenes>
     <resources>
