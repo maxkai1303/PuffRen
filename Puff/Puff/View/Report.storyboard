@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,27 +17,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otU-36-CYX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="udk-4Y-AkZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QrC-yD-fWH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ICZ-2X-gDb">
+                                    <rect key="frame" x="0.0" y="421.5" width="414" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="當日營業回報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-dS-yAW">
+                                            <rect key="frame" x="129" y="61" width="156" height="36.5"/>
+                                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5D-af-DAn">
+                                            <rect key="frame" x="16" y="121.5" width="382" height="52"/>
+                                            <color key="backgroundColor" name="Brown"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="bcP-dG-kZV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="24"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="出攤位置回報"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-oA-EFx">
+                                            <rect key="frame" x="16" y="203.5" width="382" height="52"/>
+                                            <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="HoS-8s-I2B"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="24"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="今日休息"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JcA-oA-EFx" firstAttribute="trailing" secondItem="r5D-af-DAn" secondAttribute="trailing" id="Ag5-w0-Ki3"/>
+                                        <constraint firstItem="r5D-af-DAn" firstAttribute="top" secondItem="NFU-dS-yAW" secondAttribute="bottom" constant="24" id="BR0-7a-HUk"/>
+                                        <constraint firstItem="JcA-oA-EFx" firstAttribute="leading" secondItem="r5D-af-DAn" secondAttribute="leading" id="E9C-JO-8Mq"/>
+                                        <constraint firstItem="r5D-af-DAn" firstAttribute="leading" secondItem="ICZ-2X-gDb" secondAttribute="leading" constant="16" id="EPm-Ih-koN"/>
+                                        <constraint firstItem="NFU-dS-yAW" firstAttribute="leading" secondItem="ICZ-2X-gDb" secondAttribute="leading" constant="129" id="GBT-IE-XUj"/>
+                                        <constraint firstItem="NFU-dS-yAW" firstAttribute="top" secondItem="ICZ-2X-gDb" secondAttribute="top" constant="61" id="GnG-nj-k5a"/>
+                                        <constraint firstAttribute="trailing" secondItem="NFU-dS-yAW" secondAttribute="trailing" constant="129" id="LZ4-8t-Fw1"/>
+                                        <constraint firstItem="JcA-oA-EFx" firstAttribute="top" secondItem="r5D-af-DAn" secondAttribute="bottom" constant="30" id="cUx-2o-dyo"/>
+                                        <constraint firstAttribute="trailing" secondItem="r5D-af-DAn" secondAttribute="trailing" constant="16" id="fMy-E5-cGG"/>
+                                    </constraints>
                                 </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="174" id="82x-8X-cX0">
+                                        <rect key="frame" x="20" y="55.5" width="374" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82x-8X-cX0" id="LFN-Fq-Qoh">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.57254901960000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="174" id="eUu-DI-t8Y">
+                                        <rect key="frame" x="20" y="229.5" width="374" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUu-DI-t8Y" id="bpD-0y-Pur">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5SR-Zq-Fhu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="otU-36-CYX" firstAttribute="top" secondItem="5SR-Zq-Fhu" secondAttribute="top" id="J06-iw-brg"/>
-                            <constraint firstItem="otU-36-CYX" firstAttribute="leading" secondItem="5SR-Zq-Fhu" secondAttribute="leading" id="gNK-XK-aqd"/>
-                            <constraint firstItem="5SR-Zq-Fhu" firstAttribute="bottom" secondItem="otU-36-CYX" secondAttribute="bottom" id="idj-Q8-UH3"/>
-                            <constraint firstItem="5SR-Zq-Fhu" firstAttribute="trailing" secondItem="otU-36-CYX" secondAttribute="trailing" id="kTn-CH-QPI"/>
+                            <constraint firstItem="QrC-yD-fWH" firstAttribute="trailing" secondItem="5SR-Zq-Fhu" secondAttribute="trailing" id="3H3-HH-xib"/>
+                            <constraint firstItem="QrC-yD-fWH" firstAttribute="top" secondItem="8EG-Mf-M5f" secondAttribute="top" id="HDE-po-dL0"/>
+                            <constraint firstItem="5SR-Zq-Fhu" firstAttribute="bottom" secondItem="QrC-yD-fWH" secondAttribute="bottom" id="NXa-QI-ugY"/>
+                            <constraint firstItem="QrC-yD-fWH" firstAttribute="leading" secondItem="5SR-Zq-Fhu" secondAttribute="leading" id="oUp-Ma-fPD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="reportTableView" destination="otU-36-CYX" id="eYQ-WP-HaP"/>
+                        <outlet property="reportTableView" destination="QrC-yD-fWH" id="Iq7-uF-W64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0X-jl-WJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,6 +113,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Brown">
+            <color red="0.50199997425079346" green="0.31000000238418579" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

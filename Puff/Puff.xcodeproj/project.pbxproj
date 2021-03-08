@@ -56,6 +56,8 @@
 		457A974225BEB68500A59014 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A974125BEB68500A59014 /* UIScreen+Extension.swift */; };
 		4580C11825C29B47003E2814 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580C11725C29B47003E2814 /* UIImageView+Extension.swift */; };
 		45AE40D925F52DF20073BD10 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE40D825F52DF20073BD10 /* ReportViewController.swift */; };
+		45AE40E025F61DF70073BD10 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE40DE25F61DF70073BD10 /* ReportTableViewCell.swift */; };
+		45AE40E125F61DF70073BD10 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AE40DF25F61DF70073BD10 /* ReportTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		457A974125BEB68500A59014 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		4580C11725C29B47003E2814 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		45AE40D825F52DF20073BD10 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = Puff/Controller/ReportViewController.swift; sourceTree = SOURCE_ROOT; };
+		45AE40DE25F61DF70073BD10 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		45AE40DF25F61DF70073BD10 /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +317,7 @@
 		452BCBBF25BEBE3C00838E06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-
+				45AE40E325F61DFF0073BD10 /* Report */,
 				248785DF25F610E700CA96F2 /* Calendar */,
 				457360D725F4DB8D00333749 /* AddCar */,
 				24F7487525E31520009CDA35 /* UserProfile */,
@@ -390,6 +394,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		45AE40E325F61DFF0073BD10 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				45AE40DE25F61DF70073BD10 /* ReportTableViewCell.swift */,
+				45AE40DF25F61DF70073BD10 /* ReportTableViewCell.xib */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -454,6 +467,7 @@
 				245D329E25D0E5A400726CAA /* ItemCollectionViewCell.xib in Resources */,
 				457A970C25B9465D00A59014 /* Assets.xcassets in Resources */,
 				24B1FA4025E3C48B00186AB6 /* Main.storyboard in Resources */,
+				45AE40E125F61DF70073BD10 /* ReportTableViewCell.xib in Resources */,
 				457360D525F4DB8100333749 /* AddCarTableViewCell.xib in Resources */,
 				457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */,
 				24B1FA4825E3C4D000186AB6 /* LaunchScreen.storyboard in Resources */,
@@ -479,13 +493,13 @@
 				24F7488225E31742009CDA35 /* UserProfileCollectionViewCell.swift in Sources */,
 				24A58CE925D129030058A819 /* UIColor+Extension.swift in Sources */,
 				457A970325B9465C00A59014 /* AppDelegate.swift in Sources */,
-
 				248785DC25F6109A00CA96F2 /* CalendarView.swift in Sources */,
 				457360DB25F51B1900333749 /* AddCarViewController.swift in Sources */,
 				240DFAB325D1007100AD5350 /* HomeViewController.swift in Sources */,
 				248785DD25F6109A00CA96F2 /* CalendarManager.swift in Sources */,
 				248785DB25F6109A00CA96F2 /* CalendarCollectionViewCell.swift in Sources */,
 				248785D625F6108B00CA96F2 /* Date+Extension.swift in Sources */,
+				45AE40E025F61DF70073BD10 /* ReportTableViewCell.swift in Sources */,
 				452BCBB925BEBD2B00838E06 /* UITableView+Extension.swift in Sources */,
 				245D329225D0E4A100726CAA /* ItemViewController.swift in Sources */,
 				24F7486A25E2FC12009CDA35 /* ItemDetailTableViewCell.swift in Sources */,
