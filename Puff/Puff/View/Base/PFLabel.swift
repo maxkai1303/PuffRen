@@ -53,14 +53,14 @@ class PFLabel: UILabel {
     
     // MARK: - Corner Radius
     
-    @IBInspectable var cornerRadius: CGFloat = 0.0 {
-        
-        didSet {
-            
-            self.layer.cornerRadius = cornerRadius
-            
-            self.clipsToBounds = true
-        }
-    }
+//    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+//        
+//        didSet {
+//            
+//            self.layer.cornerRadius = cornerRadius
+//            
+//            self.clipsToBounds = true
+//        }
+//    }
 
 }

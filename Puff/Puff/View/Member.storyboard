@@ -4,22 +4,21 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Profile View Controller-->
+        <!--會員頁面-->
         <scene sceneID="EOl-Ph-VJA">
             <objects>
-                <viewController id="FOS-e0-duu" customClass="UserProfileViewController" customModule="Puff" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="會員頁面" id="FOS-e0-duu" customClass="UserProfileViewController" customModule="Puff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MXG-2Y-MM1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u0i-fb-UHv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wLE-cp-XQ7">
+                                <rect key="frame" x="4" y="88" width="406" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wLE-cp-XQ7">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -33,14 +32,16 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cgz-MR-ec5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cgz-MR-ec5" firstAttribute="bottom" secondItem="u0i-fb-UHv" secondAttribute="bottom" id="90q-cZ-uYh"/>
                             <constraint firstItem="u0i-fb-UHv" firstAttribute="top" secondItem="Cgz-MR-ec5" secondAttribute="top" id="LOI-er-REf"/>
-                            <constraint firstItem="Cgz-MR-ec5" firstAttribute="trailing" secondItem="u0i-fb-UHv" secondAttribute="trailing" id="UE6-d9-mcD"/>
-                            <constraint firstItem="u0i-fb-UHv" firstAttribute="leading" secondItem="Cgz-MR-ec5" secondAttribute="leading" id="ycI-26-MNQ"/>
+                            <constraint firstItem="Cgz-MR-ec5" firstAttribute="trailing" secondItem="u0i-fb-UHv" secondAttribute="trailing" constant="4" id="UE6-d9-mcD"/>
+                            <constraint firstItem="u0i-fb-UHv" firstAttribute="leading" secondItem="Cgz-MR-ec5" secondAttribute="leading" constant="4" id="ycI-26-MNQ"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="u0i-fb-UHv" id="egd-cs-VVf"/>
                     </connections>
@@ -50,9 +51,4 @@
             <point key="canvasLocation" x="300" y="143"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

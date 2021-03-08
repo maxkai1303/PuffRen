@@ -31,6 +31,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.titleView = UIImageView(image: UIImage(named: "Navbar"))
     }
 
 }

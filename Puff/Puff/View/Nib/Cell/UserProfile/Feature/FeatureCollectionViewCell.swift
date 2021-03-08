@@ -8,7 +8,7 @@
 import UIKit
 
 class FeatureCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
@@ -16,9 +16,8 @@ class FeatureCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setup(featureName: String) {
+    func setup(name: String) {
         
-        nameLabel.text = featureName
+        nameLabel.text = name
     }
-
 }

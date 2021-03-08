@@ -13,6 +13,11 @@ class BaseViewController: UIViewController {
     
     var hideNavigationBar: Bool { return false }
     
+    var navigationBarTitle: String {
+        
+        return ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,13 +34,13 @@ class BaseViewController: UIViewController {
         
         barAppearance.backgroundColor = .main
         
-        navigationItem.titleView = UIImageView(image: UIImage(named: "Navbar"))
-        
         navigationController?.navigationBar.standardAppearance = barAppearance
         
         self.navigationItem.hidesBackButton = hideNavigationBackButton
         
         self.navigationController?.isNavigationBarHidden = hideNavigationBar
+        
+        self.navigationController?.title = navigationBarTitle
     }
 
     func addBackButton(frame: CGRect = CGRect(x: 20, y: 55, width: 46, height: 46), backgroundColor: UIColor = .main) {
@@ -47,6 +52,8 @@ class BaseViewController: UIViewController {
         let image = UIImage(systemName: "chevron.backward", withConfiguration: symbolConfig)
         
         backButton.setImage(image, for: .normal)
+        
+        backButton.tintColor = .text
         
         backButton.backgroundColor = backgroundColor
         

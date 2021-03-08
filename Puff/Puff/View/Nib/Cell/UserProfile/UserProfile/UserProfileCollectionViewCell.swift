@@ -19,8 +19,11 @@ class UserProfileCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func setup() {
         
+        userNameLabel.text = "eric tang"
+        
+        memberLevelLabel.text = "白金泡芙"
     }
 }
