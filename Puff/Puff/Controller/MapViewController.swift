@@ -164,10 +164,12 @@ class MapViewController: BaseViewController {
         scale.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scale)
 
-        NSLayoutConstraint.activate([button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-                                     button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-                                     scale.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -20),
-                                     scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)])
+        NSLayoutConstraint.activate(
+            [button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+             scale.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -20),
+             scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)]
+        )
     }
     
     func openMap(location: CLLocationCoordinate2D, targetName: String?) {
@@ -193,17 +195,19 @@ class MapViewController: BaseViewController {
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         if let location = locations.first {
+         
             print("Location data received.")
+            
             print(location)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
-        print(error)
+        print(#function, error)
     }
-    
 }
 
 // MARK: - MKMapViewDelegate

@@ -104,7 +104,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU0-va-hdL">
-                                        <rect key="frame" x="20" y="12" width="374" height="45"/>
+                                        <rect key="frame" x="24" y="12" width="366" height="45"/>
                                         <color key="backgroundColor" name="Main"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="WI8-KL-99g"/>
@@ -123,8 +123,8 @@
                                     <constraint firstAttribute="trailing" secondItem="mHW-OS-q3m" secondAttribute="trailing" id="1yf-ow-edK"/>
                                     <constraint firstAttribute="height" constant="100" id="4WI-yy-9BE"/>
                                     <constraint firstItem="mHW-OS-q3m" firstAttribute="leading" secondItem="TAA-vg-ZzO" secondAttribute="leading" id="JfM-BH-pGJ"/>
-                                    <constraint firstItem="xU0-va-hdL" firstAttribute="leading" secondItem="TAA-vg-ZzO" secondAttribute="leading" constant="20" id="QR4-wq-1G5"/>
-                                    <constraint firstAttribute="trailing" secondItem="xU0-va-hdL" secondAttribute="trailing" constant="20" id="jP6-ET-mzk"/>
+                                    <constraint firstItem="xU0-va-hdL" firstAttribute="leading" secondItem="TAA-vg-ZzO" secondAttribute="leading" constant="24" id="QR4-wq-1G5"/>
+                                    <constraint firstAttribute="trailing" secondItem="xU0-va-hdL" secondAttribute="trailing" constant="24" id="jP6-ET-mzk"/>
                                     <constraint firstItem="mHW-OS-q3m" firstAttribute="top" secondItem="TAA-vg-ZzO" secondAttribute="top" id="y3R-8F-QIQ"/>
                                 </constraints>
                             </view>
