@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rty-Zc-km5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rty-Zc-km5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Report View Controller-->
         <scene sceneID="ImK-n4-m0e">
             <objects>
-                <viewController id="rty-Zc-km5" sceneMemberID="viewController">
+                <viewController id="rty-Zc-km5" customClass="ReportViewController" customModule="Puff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8EG-Mf-M5f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otU-36-CYX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="udk-4Y-AkZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5SR-Zq-Fhu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="otU-36-CYX" firstAttribute="top" secondItem="5SR-Zq-Fhu" secondAttribute="top" id="J06-iw-brg"/>
+                            <constraint firstItem="otU-36-CYX" firstAttribute="leading" secondItem="5SR-Zq-Fhu" secondAttribute="leading" id="gNK-XK-aqd"/>
+                            <constraint firstItem="5SR-Zq-Fhu" firstAttribute="bottom" secondItem="otU-36-CYX" secondAttribute="bottom" id="idj-Q8-UH3"/>
+                            <constraint firstItem="5SR-Zq-Fhu" firstAttribute="trailing" secondItem="otU-36-CYX" secondAttribute="trailing" id="kTn-CH-QPI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reportTableView" destination="otU-36-CYX" id="eYQ-WP-HaP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0X-jl-WJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="90"/>
+            <point key="canvasLocation" x="115.94202898550725" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>

@@ -41,6 +41,6 @@ class ItemDetailTableViewCell: UITableViewCell {
         
         nameLabel.text = item.name
         
-        descriptionLabel.addAttributedText(text: "採用高級100%棉質素材的外套。輕盈保暖高質感的針織大衣！精緻做工升級，展現高質感氛圍。", lineSpaceing: 10)
+        descriptionLabel.addAttributedText(text: "泡芙人的誠信原則 無添加任何防腐劑及香精 大朋友、小朋友都吃的安心的美味甜點", lineSpaceing: 10)
     }
 }

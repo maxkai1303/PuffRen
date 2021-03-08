@@ -40,12 +40,17 @@
 		24F7488725E31750009CDA35 /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7488525E31750009CDA35 /* FeatureCollectionViewCell.swift */; };
 		24F7488825E31750009CDA35 /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7488625E31750009CDA35 /* FeatureCollectionViewCell.xib */; };
 		452BCBB925BEBD2B00838E06 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BCBB825BEBD2B00838E06 /* UITableView+Extension.swift */; };
+		457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457360CA25F4D3C000333749 /* AddCar.storyboard */; };
+		457360D425F4DB8100333749 /* AddCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457360D225F4DB8100333749 /* AddCarTableViewCell.swift */; };
+		457360D525F4DB8100333749 /* AddCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457360D325F4DB8100333749 /* AddCarTableViewCell.xib */; };
+		457360DB25F51B1900333749 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457360DA25F51B1900333749 /* AddCarViewController.swift */; };
 		457A970325B9465C00A59014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A970225B9465C00A59014 /* AppDelegate.swift */; };
 		457A970525B9465C00A59014 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A970425B9465C00A59014 /* SceneDelegate.swift */; };
 		457A970C25B9465D00A59014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457A970B25B9465D00A59014 /* Assets.xcassets */; };
 		457A973D25BEB52F00A59014 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A973C25BEB52F00A59014 /* UIView+Extension.swift */; };
 		457A974225BEB68500A59014 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A974125BEB68500A59014 /* UIScreen+Extension.swift */; };
 		4580C11825C29B47003E2814 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580C11725C29B47003E2814 /* UIImageView+Extension.swift */; };
+		45AE40D925F52DF20073BD10 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE40D825F52DF20073BD10 /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +87,10 @@
 		24F7488525E31750009CDA35 /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		24F7488625E31750009CDA35 /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		452BCBB825BEBD2B00838E06 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		457360CA25F4D3C000333749 /* AddCar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCar.storyboard; sourceTree = "<group>"; };
+		457360D225F4DB8100333749 /* AddCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarTableViewCell.swift; sourceTree = "<group>"; };
+		457360D325F4DB8100333749 /* AddCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCarTableViewCell.xib; sourceTree = "<group>"; };
+		457360DA25F51B1900333749 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCarViewController.swift; path = Puff/Controller/AddCarViewController.swift; sourceTree = SOURCE_ROOT; };
 		457A96FF25B9465C00A59014 /* Puff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457A970225B9465C00A59014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457A970425B9465C00A59014 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 		457A973C25BEB52F00A59014 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		457A974125BEB68500A59014 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		4580C11725C29B47003E2814 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		45AE40D825F52DF20073BD10 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = Puff/Controller/ReportViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,8 @@
 				24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */,
 				24F7487225E314FE009CDA35 /* UserProfileViewController.swift */,
 				240D38FF25E3D544008E1C61 /* MapViewController.swift */,
+				457360DA25F51B1900333749 /* AddCarViewController.swift */,
+				45AE40D825F52DF20073BD10 /* ReportViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +256,7 @@
 				452BCBC025BEBE4200838E06 /* Nib */,
 				245D328625CD4D3A00726CAA /* Base */,
 				24B1FA3F25E3C48B00186AB6 /* Main.storyboard */,
+				457360CA25F4D3C000333749 /* AddCar.storyboard */,
 				241B6D2D25C7BD210091643F /* Item.storyboard */,
 				24B1FA3925E3C40100186AB6 /* Map.storyboard */,
 				245D327225CD40E300726CAA /* Report.storyboard */,
@@ -256,6 +269,7 @@
 		452BCBBF25BEBE3C00838E06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				457360D725F4DB8D00333749 /* AddCar */,
 				24F7487525E31520009CDA35 /* UserProfile */,
 				24F7485325E2FA48009CDA35 /* ItemDetail */,
 				245D329525D0E54000726CAA /* Item */,
@@ -270,6 +284,15 @@
 				452BCBBF25BEBE3C00838E06 /* Cell */,
 			);
 			path = Nib;
+			sourceTree = "<group>";
+		};
+		457360D725F4DB8D00333749 /* AddCar */ = {
+			isa = PBXGroup;
+			children = (
+				457360D225F4DB8100333749 /* AddCarTableViewCell.swift */,
+				457360D325F4DB8100333749 /* AddCarTableViewCell.xib */,
+			);
+			path = AddCar;
 			sourceTree = "<group>";
 		};
 		457A96F625B9465C00A59014 = {
@@ -382,6 +405,8 @@
 				245D329E25D0E5A400726CAA /* ItemCollectionViewCell.xib in Resources */,
 				457A970C25B9465D00A59014 /* Assets.xcassets in Resources */,
 				24B1FA4025E3C48B00186AB6 /* Main.storyboard in Resources */,
+				457360D525F4DB8100333749 /* AddCarTableViewCell.xib in Resources */,
+				457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */,
 				24B1FA4825E3C4D000186AB6 /* LaunchScreen.storyboard in Resources */,
 				241B6D2E25C7BD210091643F /* Item.storyboard in Resources */,
 				2420B57125D0FCF40022EDAD /* HomeTableViewCell.xib in Resources */,
@@ -405,11 +430,13 @@
 				24F7488225E31742009CDA35 /* UserProfileCollectionViewCell.swift in Sources */,
 				24A58CE925D129030058A819 /* UIColor+Extension.swift in Sources */,
 				457A970325B9465C00A59014 /* AppDelegate.swift in Sources */,
+				457360DB25F51B1900333749 /* AddCarViewController.swift in Sources */,
 				240DFAB325D1007100AD5350 /* HomeViewController.swift in Sources */,
 				452BCBB925BEBD2B00838E06 /* UITableView+Extension.swift in Sources */,
 				245D329225D0E4A100726CAA /* ItemViewController.swift in Sources */,
 				24F7486A25E2FC12009CDA35 /* ItemDetailTableViewCell.swift in Sources */,
 				24F7487325E314FF009CDA35 /* UserProfileViewController.swift in Sources */,
+				45AE40D925F52DF20073BD10 /* ReportViewController.swift in Sources */,
 				24A61FB625E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift in Sources */,
 				457A973D25BEB52F00A59014 /* UIView+Extension.swift in Sources */,
 				24B1FA3125E3AC6300186AB6 /* UserProfileDataProvider.swift in Sources */,
@@ -417,6 +444,7 @@
 				457A970525B9465C00A59014 /* SceneDelegate.swift in Sources */,
 				24A58CE525D1289A0058A819 /* BaseViewController.swift in Sources */,
 				24F7483125E246E9009CDA35 /* ViewAnimationHelper.swift in Sources */,
+				457360D425F4DB8100333749 /* AddCarTableViewCell.swift in Sources */,
 				240D390025E3D544008E1C61 /* MapViewController.swift in Sources */,
 				457A974225BEB68500A59014 /* UIScreen+Extension.swift in Sources */,
 				24F7485125E2F045009CDA35 /* ItemDetailViewController.swift in Sources */,
