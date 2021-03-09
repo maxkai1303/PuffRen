@@ -9,23 +9,25 @@ import Foundation
 
 class UserProfileDataProvider {
     
-    enum DataType: CaseIterable {
+    enum LoginStatus {
         
-        static var allCases: [UserProfileDataProvider.DataType] {
-            
-            return [.userProfile,
-                    memberFeature("會員功能", MemberFeature.allCases),
-                    storeFeature("攤主功能", StoreFeature.allCases)]
-        }
+        case member
+        
+        case store
+    }
+    
+    enum SectionHeaderData: CaseIterable {
         
         case userProfile
         
-        case memberFeature(String ,[MemberFeature])
+        case memberFeature
         
-        case storeFeature(String, [StoreFeature])
+        case storeFeature
     }
     
     enum MemberFeature: String, CaseIterable {
+        
+        static let title = "會員功能"
         
         case record = "訂單查詢"
         
@@ -38,11 +40,11 @@ class UserProfileDataProvider {
     
     enum StoreFeature: String, CaseIterable {
         
+        static let title = "攤主功能"
+        
         case stateReport = "營業狀況回報"
         
         case recordReport = "營業紀錄回報"
-        
-        case edit = "查看營業紀錄"
         
         case quickResponseCode = "QRCode"
     }

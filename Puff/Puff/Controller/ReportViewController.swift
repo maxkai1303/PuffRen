@@ -9,7 +9,6 @@ import UIKit
 
 class ReportViewController: UIViewController {
     
-    
     @IBOutlet weak var reportTableView: UITableView!
     
     override func viewDidLoad() {

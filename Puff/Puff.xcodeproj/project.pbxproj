@@ -29,6 +29,13 @@
 		24A58CFE25D689B10058A819 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A58CFD25D689B10058A819 /* HTTPClient.swift */; };
 		24A61FB625E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A61FB425E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift */; };
 		24A61FB725E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A61FB525E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib */; };
+		24B15CA625F61DAC003EE16D /* StoreRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CA525F61DAC003EE16D /* StoreRecord.storyboard */; };
+		24B15CAB25F62033003EE16D /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B15CA925F62033003EE16D /* RecordTableViewCell.swift */; };
+		24B15CAC25F62033003EE16D /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CAA25F62033003EE16D /* RecordTableViewCell.xib */; };
+		24B15CB025F620C2003EE16D /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CAF25F620C2003EE16D /* CalendarCollectionViewCell.xib */; };
+		24B15CB325F620E9003EE16D /* StoreRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B15CB225F620E9003EE16D /* StoreRecordViewController.swift */; };
+		24B15CBA25F78140003EE16D /* ItemDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B15CB825F78140003EE16D /* ItemDetailTableViewCell.swift */; };
+		24B15CBB25F78140003EE16D /* ItemDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CB925F78140003EE16D /* ItemDetailTableViewCell.xib */; };
 		24B1FA3125E3AC6300186AB6 /* UserProfileDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1FA3025E3AC6300186AB6 /* UserProfileDataProvider.swift */; };
 		24B1FA3A25E3C40100186AB6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B1FA3925E3C40100186AB6 /* Map.storyboard */; };
 		24B1FA4025E3C48B00186AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B1FA3F25E3C48B00186AB6 /* Main.storyboard */; };
@@ -36,8 +43,6 @@
 		24CC5B6325E509D00018B542 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC5B6225E509CF0018B542 /* MapKit.framework */; };
 		24F7483125E246E9009CDA35 /* ViewAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */; };
 		24F7485125E2F045009CDA35 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */; };
-		24F7486A25E2FC12009CDA35 /* ItemDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7486825E2FC12009CDA35 /* ItemDetailTableViewCell.swift */; };
-		24F7486B25E2FC12009CDA35 /* ItemDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F7486925E2FC12009CDA35 /* ItemDetailTableViewCell.xib */; };
 		24F7486F25E305CE009CDA35 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7486E25E305CE009CDA35 /* UILabel+Extension.swift */; };
 		24F7487325E314FF009CDA35 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7487225E314FE009CDA35 /* UserProfileViewController.swift */; };
 		24F7488225E31742009CDA35 /* UserProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7488025E31742009CDA35 /* UserProfileCollectionViewCell.swift */; };
@@ -81,6 +86,13 @@
 		24A58CFD25D689B10058A819 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		24A61FB425E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		24A61FB525E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		24B15CA525F61DAC003EE16D /* StoreRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreRecord.storyboard; sourceTree = "<group>"; };
+		24B15CA925F62033003EE16D /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		24B15CAA25F62033003EE16D /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		24B15CAF25F620C2003EE16D /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
+		24B15CB225F620E9003EE16D /* StoreRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRecordViewController.swift; sourceTree = "<group>"; };
+		24B15CB825F78140003EE16D /* ItemDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailTableViewCell.swift; sourceTree = "<group>"; };
+		24B15CB925F78140003EE16D /* ItemDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailTableViewCell.xib; sourceTree = "<group>"; };
 		24B1FA3025E3AC6300186AB6 /* UserProfileDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDataProvider.swift; sourceTree = "<group>"; };
 		24B1FA3925E3C40100186AB6 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		24B1FA3F25E3C48B00186AB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Puff/View/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -88,8 +100,6 @@
 		24CC5B6225E509CF0018B542 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimationHelper.swift; sourceTree = "<group>"; };
 		24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
-		24F7486825E2FC12009CDA35 /* ItemDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTableViewCell.swift; sourceTree = "<group>"; };
-		24F7486925E2FC12009CDA35 /* ItemDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailTableViewCell.xib; sourceTree = "<group>"; };
 		24F7486E25E305CE009CDA35 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		24F7487225E314FE009CDA35 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		24F7488025E31742009CDA35 /* UserProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +188,7 @@
 				240D38FF25E3D544008E1C61 /* MapViewController.swift */,
 				457360DA25F51B1900333749 /* AddCarViewController.swift */,
 				45AE40D825F52DF20073BD10 /* ReportViewController.swift */,
+				24B15CB225F620E9003EE16D /* StoreRecordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 		245D329525D0E54000726CAA /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				24B15CB725F78140003EE16D /* ItemDetail */,
 				245D329B25D0E5A400726CAA /* ItemCollectionViewCell.swift */,
 				245D329C25D0E5A400726CAA /* ItemCollectionViewCell.xib */,
 			);
@@ -211,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				248785D825F6109A00CA96F2 /* CalendarCollectionViewCell.swift */,
+				24B15CAF25F620C2003EE16D /* CalendarCollectionViewCell.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -258,6 +271,31 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
+		24B15CA825F62014003EE16D /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				24B15CA925F62033003EE16D /* RecordTableViewCell.swift */,
+				24B15CAA25F62033003EE16D /* RecordTableViewCell.xib */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		24B15CB725F78140003EE16D /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				24B15CB825F78140003EE16D /* ItemDetailTableViewCell.swift */,
+				24B15CB925F78140003EE16D /* ItemDetailTableViewCell.xib */,
+			);
+			path = ItemDetail;
+			sourceTree = "<group>";
+		};
+		24B15CBD25F7816E003EE16D /* StoreRecord */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoreRecord;
+			sourceTree = "<group>";
+		};
 		24CC5B6125E509CF0018B542 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,15 +310,6 @@
 				24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		24F7485325E2FA48009CDA35 /* ItemDetail */ = {
-			isa = PBXGroup;
-			children = (
-				24F7486825E2FC12009CDA35 /* ItemDetailTableViewCell.swift */,
-				24F7486925E2FC12009CDA35 /* ItemDetailTableViewCell.xib */,
-			);
-			path = ItemDetail;
 			sourceTree = "<group>";
 		};
 		24F7487525E31520009CDA35 /* UserProfile */ = {
@@ -305,6 +334,7 @@
 				24B1FA3925E3C40100186AB6 /* Map.storyboard */,
 				245D327225CD40E300726CAA /* Report.storyboard */,
 				241B6D3025C7BD630091643F /* Member.storyboard */,
+				24B15CA525F61DAC003EE16D /* StoreRecord.storyboard */,
 				24B1FA4725E3C4D000186AB6 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -313,13 +343,13 @@
 		452BCBBF25BEBE3C00838E06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-
-				248785DF25F610E700CA96F2 /* Calendar */,
 				457360D725F4DB8D00333749 /* AddCar */,
-				24F7487525E31520009CDA35 /* UserProfile */,
-				24F7485325E2FA48009CDA35 /* ItemDetail */,
-				245D329525D0E54000726CAA /* Item */,
+				248785DF25F610E700CA96F2 /* Calendar */,
 				2420B57325D0FCF80022EDAD /* Home */,
+				245D329525D0E54000726CAA /* Item */,
+				24B15CA825F62014003EE16D /* Record */,
+				24B15CBD25F7816E003EE16D /* StoreRecord */,
+				24F7487525E31520009CDA35 /* UserProfile */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -450,14 +480,17 @@
 				241B6D3125C7BD630091643F /* Member.storyboard in Resources */,
 				24F7488825E31750009CDA35 /* FeatureCollectionViewCell.xib in Resources */,
 				24A61FB725E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib in Resources */,
-				24F7486B25E2FC12009CDA35 /* ItemDetailTableViewCell.xib in Resources */,
 				245D329E25D0E5A400726CAA /* ItemCollectionViewCell.xib in Resources */,
 				457A970C25B9465D00A59014 /* Assets.xcassets in Resources */,
 				24B1FA4025E3C48B00186AB6 /* Main.storyboard in Resources */,
+				24B15CA625F61DAC003EE16D /* StoreRecord.storyboard in Resources */,
 				457360D525F4DB8100333749 /* AddCarTableViewCell.xib in Resources */,
+				24B15CAC25F62033003EE16D /* RecordTableViewCell.xib in Resources */,
 				457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */,
 				24B1FA4825E3C4D000186AB6 /* LaunchScreen.storyboard in Resources */,
+				24B15CB025F620C2003EE16D /* CalendarCollectionViewCell.xib in Resources */,
 				241B6D2E25C7BD210091643F /* Item.storyboard in Resources */,
+				24B15CBB25F78140003EE16D /* ItemDetailTableViewCell.xib in Resources */,
 				2420B57125D0FCF40022EDAD /* HomeTableViewCell.xib in Resources */,
 				24F7488325E31742009CDA35 /* UserProfileCollectionViewCell.xib in Resources */,
 				245D327325CD40E300726CAA /* Report.storyboard in Resources */,
@@ -477,9 +510,9 @@
 				245D328825CD4D5400726CAA /* PFLabel.swift in Sources */,
 				24F7488725E31750009CDA35 /* FeatureCollectionViewCell.swift in Sources */,
 				24F7488225E31742009CDA35 /* UserProfileCollectionViewCell.swift in Sources */,
+				24B15CBA25F78140003EE16D /* ItemDetailTableViewCell.swift in Sources */,
 				24A58CE925D129030058A819 /* UIColor+Extension.swift in Sources */,
 				457A970325B9465C00A59014 /* AppDelegate.swift in Sources */,
-
 				248785DC25F6109A00CA96F2 /* CalendarView.swift in Sources */,
 				457360DB25F51B1900333749 /* AddCarViewController.swift in Sources */,
 				240DFAB325D1007100AD5350 /* HomeViewController.swift in Sources */,
@@ -488,11 +521,12 @@
 				248785D625F6108B00CA96F2 /* Date+Extension.swift in Sources */,
 				452BCBB925BEBD2B00838E06 /* UITableView+Extension.swift in Sources */,
 				245D329225D0E4A100726CAA /* ItemViewController.swift in Sources */,
-				24F7486A25E2FC12009CDA35 /* ItemDetailTableViewCell.swift in Sources */,
 				24F7487325E314FF009CDA35 /* UserProfileViewController.swift in Sources */,
+				24B15CB325F620E9003EE16D /* StoreRecordViewController.swift in Sources */,
 				45AE40D925F52DF20073BD10 /* ReportViewController.swift in Sources */,
 				24A61FB625E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift in Sources */,
 				457A973D25BEB52F00A59014 /* UIView+Extension.swift in Sources */,
+				24B15CAB25F62033003EE16D /* RecordTableViewCell.swift in Sources */,
 				24B1FA3125E3AC6300186AB6 /* UserProfileDataProvider.swift in Sources */,
 				240DFAB925D1019500AD5350 /* HomeDataProvider.swift in Sources */,
 				457A970525B9465C00A59014 /* SceneDelegate.swift in Sources */,
