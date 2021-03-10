@@ -289,13 +289,6 @@
 			path = ItemDetail;
 			sourceTree = "<group>";
 		};
-		24B15CBD25F7816E003EE16D /* StoreRecord */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StoreRecord;
-			sourceTree = "<group>";
-		};
 		24CC5B6125E509CF0018B542 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +341,6 @@
 				2420B57325D0FCF80022EDAD /* Home */,
 				245D329525D0E54000726CAA /* Item */,
 				24B15CA825F62014003EE16D /* Record */,
-				24B15CBD25F7816E003EE16D /* StoreRecord */,
 				24F7487525E31520009CDA35 /* UserProfile */,
 			);
 			path = Cell;

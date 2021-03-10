@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoreRecordViewController: UIViewController {
+class StoreRecordViewController: BaseViewController {
     
     @IBOutlet weak var calendarView: CalendarView! {
         
@@ -16,17 +16,35 @@ class StoreRecordViewController: UIViewController {
             calendarView.dataSource = self
             
             calendarView.delegate = self
+            
+            calendarView.backButton.addTarget(self, action: #selector(backToPreviousView), for: .touchUpInside)
+            
+            calendarView.editButton.addTarget(self, action: #selector(editData), for: .touchUpInside)
         }
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        
+        didSet {
+            
+            tableView.contentInsetAdjustmentBehavior = .never
+        }
+    }
+    
+    @IBOutlet weak var recordView: UIView!
     
     let calendarManager = CalendarManager(date: Date())
     
+    override var hideNavigationBar: Bool { return true }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    @objc func editData() {
         
-        
+        print("edit data")
     }
 }
 
@@ -42,7 +60,11 @@ extension StoreRecordViewController: CalendarViewDelegate {
     
     func calendarView(_ view: CalendarView, didSelect: IndexPath) {
         
-        print(#function, didSelect)
+        let day = calendarManager.dateArray[didSelect.row]
+        
+        let date = calendarManager.transformData(from: day)
+        
+        print(date)
     }
 }
 
@@ -50,16 +72,17 @@ extension StoreRecordViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreRecordTableViewCell", for: indexPath)
+        
+        return cell
     }
 }
 
 extension StoreRecordViewController: UITableViewDelegate {
-    
-    
+
 }

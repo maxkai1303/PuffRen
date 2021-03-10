@@ -16,6 +16,8 @@ extension UIColor {
         case background = "Background"
         
         case text = "Text"
+        
+        case brown = "Brown"
     }
     
     static let main = getColor(.main)
@@ -23,6 +25,8 @@ extension UIColor {
     static let background = getColor(.background)
     
     static let text = getColor(.text)
+    
+    static let brown = getColor(.brown)
     
     private static func getColor(_ color: PFColor) -> UIColor {
         

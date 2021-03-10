@@ -13,6 +13,8 @@ class CalendarManager {
     
     var dateArray: [Int] = []
     
+    // 實際的時間
+    
     var date: Date {
         
         didSet {
@@ -65,6 +67,18 @@ class CalendarManager {
         }
         
         print(#function, dateArray)
+    }
+    
+    func transformData(from num: Int) -> Date {
+        
+        
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        
+        dateComponents.day = num + 1
+        
+        let date = Calendar.current.date(from: dateComponents)!
+        
+        return date
     }
     
 //    private func getPrevDate() {

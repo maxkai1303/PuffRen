@@ -8,8 +8,11 @@
 import Foundation
 
 extension Date {
-    
-    //
+
+    func getToday() -> Int {
+        
+        return Calendar.current.component(.day, from: self)
+    }
     
     func getFirstWeekDayThisMonth() -> Int {
     

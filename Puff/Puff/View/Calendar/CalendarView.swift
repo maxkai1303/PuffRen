@@ -27,7 +27,15 @@ class CalendarView: UIView {
         }
     }
     
-    weak var delegate: CalendarViewDelegate?
+    weak var delegate: CalendarViewDelegate? {
+        
+        didSet {
+            
+            guard let delegate = delegate, let indexPath = selectedIndexPath else { return }
+            
+            delegate.calendarView(self, didSelect: indexPath)
+        }
+    }
     
     lazy var titleView: UIView = {
        
@@ -35,7 +43,7 @@ class CalendarView: UIView {
         
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        view.backgroundColor = .white
+        view.backgroundColor = .main
         
         addSubview(view)
         
@@ -52,6 +60,10 @@ class CalendarView: UIView {
         
         label.textAlignment = .center
     
+        label.font = UIFont(name: "PingFangTC-Medium", size: 17)
+        
+        label.textColor = .text
+        
         titleView.addSubview(label)
         
         return label
@@ -68,6 +80,8 @@ class CalendarView: UIView {
         let symbolConfig = UIImage.SymbolConfiguration(scale: .large)
         
         let image = UIImage(systemName: "chevron.right", withConfiguration: symbolConfig)
+        
+        button.tintColor = .text
         
         button.setImage(image, for: .normal)
         
@@ -89,6 +103,8 @@ class CalendarView: UIView {
         let symbolConfig = UIImage.SymbolConfiguration(scale: .large)
         
         let image = UIImage(systemName: "chevron.left", withConfiguration: symbolConfig)
+        
+        button.tintColor = .text
         
         button.setImage(image, for: .normal)
         
@@ -142,11 +158,47 @@ class CalendarView: UIView {
 
             collectionView.dataSource = self
             
-            collectionView.backgroundColor = .white
+            collectionView.backgroundColor = .background
             
             addSubview(collectionView)
         }
     }
+    
+    lazy var backButton: UIButton = {
+        
+        let button = UIButton()
+        
+        button.setTitle("返回", for: .normal)
+        
+        button.titleLabel?.font = UIFont(name: "PingFangTC-Medium", size: 17)
+        
+        button.setTitleColor(.text, for: .normal)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        titleView.addSubview(button)
+        
+        return button
+    }()
+    
+    lazy var editButton: UIButton = {
+        
+        let button = UIButton()
+        
+        button.setTitle("編輯", for: .normal)
+        
+        button.titleLabel?.font = UIFont(name: "PingFangTC-Medium", size: 17)
+        
+        button.setTitleColor(.text, for: .normal)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        titleView.addSubview(button)
+        
+        return button
+    }()
+    
+    private var selectedIndexPath: IndexPath?
     
     override init(frame: CGRect) {
         
@@ -161,9 +213,7 @@ class CalendarView: UIView {
     func setup() {
         
         setupTitleView()
-
-        setupTitleLabel()
-
+        
         setupStackView()
 
         setupCollectionView()
@@ -202,9 +252,7 @@ extension CalendarView: UICollectionViewDataSource {
         
         guard let manager = dataSource?.calendarView(self) else { return cell }
         
-        let date = manager.dateArray[indexPath.row]
-        
-        cell.setup(date: date)
+        cell.setup(date: manager.dateArray[indexPath.row], indexPath == selectedIndexPath)
         
         return cell
     }
@@ -216,13 +264,43 @@ extension CalendarView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let delegate = self.delegate, let dataSource = self.dataSource else {
+        guard let delegate = self.delegate else {
+            
+            print(#function, #line, "error")
             
             return
         }
         
+        self.selectedIndexPath = indexPath
+        
         delegate.calendarView(self, didSelect: indexPath)
+        
+        collectionView.reloadData()
     }
+}
+
+// MARK: - UICollectionView Delegate Flow Layout
+
+extension CalendarView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = UIScreen.width / 7
+        
+        return CGSize(width: width, height: width)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 5
+    }
+
 }
 
 // MARK: - UIButton selector function
@@ -250,6 +328,7 @@ extension CalendarView {
         
         collectionView?.reloadData()
     }
+
 }
 
 // MARK: - Set up all userinterface
@@ -260,34 +339,52 @@ extension CalendarView {
     
     func setupTitleView() {
         
+        // Title View
+        
         NSLayoutConstraint.activate([
             titleView.topAnchor.constraint(equalTo: self.topAnchor),
             titleView.rightAnchor.constraint(equalTo: self.rightAnchor),
             titleView.leftAnchor.constraint(equalTo: self.leftAnchor),
             titleView.heightAnchor.constraint(equalToConstant: 40)
         ])
-    }
-    
-    func setupTitleLabel() {
         
         layoutIfNeeded()
+        
+        // Title Label
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: titleView.topAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: titleView.centerXAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: titleView.frame.height)
         ])
+        
+        // Back Button
+        
+        NSLayoutConstraint.activate([
+            backButton.topAnchor.constraint(equalTo: titleView.topAnchor),
+            backButton.leftAnchor.constraint(equalTo: titleView.leftAnchor, constant: 14),
+            backButton.heightAnchor.constraint(equalToConstant: titleView.frame.height)
+        ])
+        
+        // Edit Button
+        
+        NSLayoutConstraint.activate([
+            editButton.topAnchor.constraint(equalTo: titleView.topAnchor),
+            editButton.rightAnchor.constraint(equalTo: titleView.rightAnchor, constant: -14),
+            editButton.heightAnchor.constraint(equalToConstant: titleView.frame.height)
+        ])
+
     }
     
     func setupNextAndPrevButton() {
 
         NSLayoutConstraint.activate([
             nextMonthButton.topAnchor.constraint(equalTo: titleView.topAnchor),
-            nextMonthButton.leftAnchor.constraint(equalTo: titleLabel.rightAnchor),
+            nextMonthButton.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 12),
             nextMonthButton.heightAnchor.constraint(equalToConstant: 40),
             nextMonthButton.widthAnchor.constraint(equalToConstant: 40),
             prevMonthButton.topAnchor.constraint(equalTo: titleView.topAnchor),
-            prevMonthButton.rightAnchor.constraint(equalTo: titleLabel.leftAnchor),
+            prevMonthButton.rightAnchor.constraint(equalTo: titleLabel.leftAnchor, constant: -12),
             prevMonthButton.heightAnchor.constraint(equalToConstant: 40),
             prevMonthButton.widthAnchor.constraint(equalToConstant: 40)
         ])
@@ -318,6 +415,8 @@ extension CalendarView {
             
             label.textColor = .black
             
+            label.backgroundColor = .background
+            
             label.text = weekText
             
             stackView.addArrangedSubview(label)
@@ -332,23 +431,24 @@ extension CalendarView {
         
         let layout = UICollectionViewFlowLayout()
         
-        let size = CGSize(width: UIScreen.width / 7, height: 50)
-        
-        layout.itemSize = size
-        
-        layout.minimumInteritemSpacing = 0
-        
-        layout.minimumLineSpacing = 5
-        
-        layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
-        
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-        
+
         NSLayoutConstraint.activate([
             collectionView!.topAnchor.constraint(equalTo: stackView.bottomAnchor),
             collectionView!.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             collectionView!.rightAnchor.constraint(equalTo: self.rightAnchor),
             collectionView!.leftAnchor.constraint(equalTo: self.leftAnchor)
         ])
+        
+        guard let today = dataSource?.calendarView(self).date.getToday(),
+              let index = dataSource?.calendarView(self).dateArray.firstIndex(of: today)
+        else {
+            
+            print(#function, #line, "error")
+            
+            return
+        }
+        
+        selectedIndexPath = IndexPath(row: index, section: 0)
     }
 }
