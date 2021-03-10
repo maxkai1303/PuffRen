@@ -41,6 +41,4 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
-    
 }

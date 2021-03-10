@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T4W-dC-Doj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T4W-dC-Doj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,26 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-9T-XDL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gdi-9T-XDL">
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HU2-lQ-dJx">
+                                <rect key="frame" x="90" y="56" width="234" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="泡芙人在哪？"/>
+                                    <segment title="明天的泡芙人"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3dK-9E-uba"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3dK-9E-uba" firstAttribute="trailing" secondItem="Gdi-9T-XDL" secondAttribute="trailing" id="7nq-EC-VDU"/>
-                            <constraint firstItem="Gdi-9T-XDL" firstAttribute="top" secondItem="3dK-9E-uba" secondAttribute="top" id="XQb-tP-ibF"/>
-                            <constraint firstItem="Gdi-9T-XDL" firstAttribute="leading" secondItem="3dK-9E-uba" secondAttribute="leading" id="mWL-z1-CIr"/>
-                            <constraint firstAttribute="bottom" secondItem="Gdi-9T-XDL" secondAttribute="bottom" id="rNN-3G-vYE"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapOutlet" destination="Gdi-9T-XDL" id="VBC-Q0-9jN"/>
+                        <outlet property="switchSegmented" destination="HU2-lQ-dJx" id="7dQ-wo-510"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbl-ui-a0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2458" y="-664"/>
+            <point key="canvasLocation" x="2457.971014492754" y="-664.28571428571422"/>
         </scene>
     </scenes>
     <resources>
