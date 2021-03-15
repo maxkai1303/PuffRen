@@ -58,7 +58,7 @@ class UserProfileViewController: BaseViewController {
 }
 
 
-// MARK: - UICollectionView Data Source
+// MARK: - UICollectionView data source
 
 extension UserProfileViewController: UICollectionViewDataSource {
     
@@ -86,6 +86,8 @@ extension UserProfileViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        // 第一行是 User Profile
+        
         if indexPath.section == 0 {
             
             let cell = collectionView.reuse(cell: UserProfileCollectionViewCell.self, for: indexPath)
@@ -94,6 +96,8 @@ extension UserProfileViewController: UICollectionViewDataSource {
             
             return cell
         }
+        
+        // 第一行之外，根據登入狀態輸入 cell 的內容
         
         let cell = collectionView.reuse(cell: FeatureCollectionViewCell.self, for: indexPath)
         
@@ -121,17 +125,16 @@ extension UserProfileViewController: UICollectionViewDataSource {
         
         let reusableView = collectionView.reuseView(view: FeatureHeaderCollectionReusableView.self, kind: kind, for: indexPath)
         
+        // 第一行不需要 Header，之外的透過登入狀態判斷要輸入輸入的資料
+        
         if indexPath.section != 0 {
             
             switch loginStatus {
             
-            case .member:
+            case .member: reusableView.setup(DataProvider.MemberFeature.title)
                 
-                reusableView.setup(DataProvider.MemberFeature.title)
+            case .store: reusableView.setup(DataProvider.StoreFeature.title)
                 
-            case .store:
-                
-                reusableView.setup(DataProvider.StoreFeature.title)
             }
         }
     
@@ -140,7 +143,7 @@ extension UserProfileViewController: UICollectionViewDataSource {
 }
 
 
-// MARK: - UICollectionView Delegate
+// MARK: - UICollectionView delegate
 
 extension UserProfileViewController: UICollectionViewDelegate {
     
@@ -190,7 +193,7 @@ extension UserProfileViewController: UICollectionViewDelegate {
 }
 
 
-// MARK: - UICollectionView Delegate Flow Layout
+// MARK: - UICollectionView delegate flow layout
 
 extension UserProfileViewController: UICollectionViewDelegateFlowLayout {
     

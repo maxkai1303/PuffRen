@@ -9,10 +9,14 @@ import Foundation
 
 extension Date {
 
+    // MARK - 取得今天日期
+    
     func getToday() -> Int {
         
         return Calendar.current.component(.day, from: self)
     }
+    
+    // MARK: - 取得當月第一天是星期幾
     
     func getFirstWeekDayThisMonth() -> Int {
     
@@ -31,9 +35,13 @@ extension Date {
         return firstWeekDay == 7 ? 0 : firstWeekDay
     }
     
+    // MARK: - 取得當月有幾天
+    
     func getDayCountThisMonth() -> Int {
         
         guard let range = Calendar.current.range(of: .day, in:.month, for: self) else {
+            
+            print(#function, "range is nil so return 0")
             
             return 0
         }
@@ -41,32 +49,39 @@ extension Date {
         return range.count
     }
     
-    enum ChageType {
+    // MARL: - 是否是這個月
+    
+    func isThisMonth() -> Bool {
         
-        case prev
+        let calendar = Calendar.current
         
-        case next
+        let newDate = calendar.dateComponents([.year, .month, .day], from: self)
+        
+        let current = calendar.dateComponents([.year, .month, .day], from: Date())
+        
+        return newDate.year == current.year && newDate.month == current.month
     }
     
-    mutating func changeMonth(_ type: ChageType) {
+    // MARK: - 切換月份相關
+    
+    enum ChageType {
+        
+        case prev, next
+    }
+    
+    mutating func getNewMonth(_ type: ChageType) {
         
         switch type {
         
         case .prev:
             
-            guard let prevMonth =  Calendar.current.date(byAdding: .month, value: -1, to: self) else {
-                
-                 return
-            }
+            guard let prevMonth =  Calendar.current.date(byAdding: .month, value: -1, to: self) else { return }
             
             self = prevMonth
         
         case .next:
             
-            guard let nextMonth =  Calendar.current.date(byAdding: .month, value: 1, to: self) else {
-                
-                 return
-            }
+            guard let nextMonth =  Calendar.current.date(byAdding: .month, value: 1, to: self) else { return }
             
             self = nextMonth
         }

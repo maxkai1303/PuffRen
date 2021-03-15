@@ -39,7 +39,6 @@ class StoreRecordViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @objc func editData() {
@@ -48,6 +47,8 @@ class StoreRecordViewController: BaseViewController {
     }
 }
 
+// MARK: - Calendar view data source
+
 extension StoreRecordViewController: CalendarViewDataSource {
     
     func calendarView(_ view: CalendarView) -> CalendarManager {
@@ -55,6 +56,8 @@ extension StoreRecordViewController: CalendarViewDataSource {
         return calendarManager
     }
 }
+
+// MARK: - Calendar view delegate
 
 extension StoreRecordViewController: CalendarViewDelegate {
     
@@ -67,6 +70,8 @@ extension StoreRecordViewController: CalendarViewDelegate {
         print(date)
     }
 }
+
+// MARK: - UITableView data source
 
 extension StoreRecordViewController: UITableViewDataSource {
     

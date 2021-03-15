@@ -9,20 +9,6 @@ import Foundation
 
 class CalendarManager {
     
-    // 日曆模組陣列
-    
-    var dateArray: [Int] = []
-    
-    // 實際的時間
-    
-    var date: Date {
-        
-        didSet {
-            
-            createDateDataModel()
-        }
-    }
-    
     // 當月的第一天, 顯示的會是第一天是星期幾，星期一就是 1
     
     private var firstDayThisMonth: Int {
@@ -35,6 +21,29 @@ class CalendarManager {
     private var dayCountThisMonth: Int {
 
         return date.getDayCountThisMonth()
+    }
+    
+    public var currentDayInDataArrayIndexPath: Int {
+        
+        let today = date.getToday()
+        
+        let index = dateArray.firstIndex(of: today)
+        
+        return index ?? 0
+    }
+    
+    // 日曆模組陣列
+    
+    var dateArray: [Int] = []
+    
+    // 實際的時間
+    
+    var date: Date {
+        
+        didSet {
+            
+            createDateDataModel()
+        }
     }
     
     init(date: Date) {
@@ -65,12 +74,9 @@ class CalendarManager {
             
             firstDay += 1
         }
-        
-        print(#function, dateArray)
     }
     
     func transformData(from num: Int) -> Date {
-        
         
         var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
         

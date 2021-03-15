@@ -37,6 +37,8 @@ class CalendarView: UIView {
         }
     }
     
+    // MARK: - Userinterface component
+    
     lazy var titleView: UIView = {
        
         let view = UIView()
@@ -198,7 +200,11 @@ class CalendarView: UIView {
         return button
     }()
     
+    // MARK: - Record user selected calendar index path
+    
     private var selectedIndexPath: IndexPath?
+    
+    // MARK: - Override function
     
     override init(frame: CGRect) {
         
@@ -209,6 +215,10 @@ class CalendarView: UIView {
         
         super.init(coder: coder)
     }
+    
+    // MARK: - Customize function
+    
+    // All userinterface related settings
     
     func setup() {
         
@@ -235,7 +245,7 @@ class CalendarView: UIView {
     }
 }
 
-// MARK: - UICollectionView Data Sourece
+// MARK: - UICollectionView data sourece
 
 extension CalendarView: UICollectionViewDataSource {
 
@@ -258,7 +268,7 @@ extension CalendarView: UICollectionViewDataSource {
     }
 }
 
-// MARK: - UICollectionView Delegate
+// MARK: - UICollectionView delegate
 
 extension CalendarView: UICollectionViewDelegate {
     
@@ -279,7 +289,7 @@ extension CalendarView: UICollectionViewDelegate {
     }
 }
 
-// MARK: - UICollectionView Delegate Flow Layout
+// MARK: - UICollectionView delegate flow layout
 
 extension CalendarView: UICollectionViewDelegateFlowLayout {
     
@@ -307,31 +317,35 @@ extension CalendarView: UICollectionViewDelegateFlowLayout {
 
 extension CalendarView {
     
-    @objc func nextMonth() {
+    func changeMonth(to type: Date.ChageType) {
         
         guard let manager = dataSource?.calendarView(self) else { return }
         
-        manager.date.changeMonth(.next)
+        // 更換 Manager 的時間
+        
+        manager.date.getNewMonth(type)
+        
+        // 更改 indexPath，如果是當前年月則會顯示當天，反之則顯是第一天
+        
+        selectedIndexPath?.row = manager.date.isThisMonth() ? manager.currentDayInDataArrayIndexPath : manager.date.getFirstWeekDayThisMonth()
         
         changeTitleLabel()
         
         collectionView?.reloadData()
     }
     
+    @objc func nextMonth() {
+        
+        changeMonth(to: .next)
+    }
+    
     @objc func prevMonth() {
         
-        guard let manager = dataSource?.calendarView(self) else { return }
-        
-        manager.date.changeMonth(.prev)
-        
-        changeTitleLabel()
-        
-        collectionView?.reloadData()
+        changeMonth(to: .prev)
     }
-
 }
 
-// MARK: - Set up all userinterface
+// MARK: - Setup userinterface function
 
 extension CalendarView {
     
@@ -440,15 +454,8 @@ extension CalendarView {
             collectionView!.leftAnchor.constraint(equalTo: self.leftAnchor)
         ])
         
-        guard let today = dataSource?.calendarView(self).date.getToday(),
-              let index = dataSource?.calendarView(self).dateArray.firstIndex(of: today)
-        else {
-            
-            print(#function, #line, "error")
-            
-            return
-        }
+        guard let manager = dataSource?.calendarView(self) else { return }
         
-        selectedIndexPath = IndexPath(row: index, section: 0)
+        selectedIndexPath = IndexPath(row: manager.currentDayInDataArrayIndexPath, section: 0)
     }
 }
