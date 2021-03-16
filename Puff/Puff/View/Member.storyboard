@@ -45,6 +45,7 @@
                     <connections>
                         <outlet property="collectionView" destination="u0i-fb-UHv" id="egd-cs-VVf"/>
                         <segue destination="5eL-9D-f3y" kind="show" id="qSl-ju-7w9"/>
+                        <segue destination="bqM-9D-xRb" kind="show" id="uhQ-RC-2MD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5e-W3-99b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -60,6 +61,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd8-nV-CGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="994" y="-34"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Aqi-v6-fzE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="bqM-9D-xRb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="r19-nu-xhi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jap-nC-Nr6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="-127"/>
         </scene>
     </scenes>
 </document>
