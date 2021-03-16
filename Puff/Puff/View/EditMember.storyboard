@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOy-Ks-zBE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Member View Controller-->
+        <scene sceneID="WHj-YU-mqK">
+            <objects>
+                <viewController id="LOy-Ks-zBE" customClass="EditMemberViewController" customModule="Puff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IMq-s6-5Ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="HuG-h7-kAG">
+                                <rect key="frame" x="87" y="92" width="240.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登入帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF4-ca-eFF">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX@XXXXX.XXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-Ld-hLt">
+                                        <rect key="frame" x="98.5" y="0.0" width="142" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="mZn-hJ-cae">
+                                <rect key="frame" x="87" y="148.5" width="153.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="會員等級" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvV-Df-Ikb">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXX 級" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1S-iB-3Mw">
+                                        <rect key="frame" x="98.5" y="0.0" width="55" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUm-pD-btN">
+                                <rect key="frame" x="16" y="227" width="382" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="yVZ-91-m7a"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="會員基本資料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udu-kf-beb">
+                                <rect key="frame" x="16" y="202" width="72" height="17"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jMq-Fl-3dB">
+                                <rect key="frame" x="0.0" y="236" width="414" height="626"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MBi-zT-hYO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jMq-Fl-3dB" firstAttribute="top" secondItem="VUm-pD-btN" secondAttribute="bottom" constant="8" symbolic="YES" id="7Wy-th-OLB"/>
+                            <constraint firstItem="HuG-h7-kAG" firstAttribute="centerX" secondItem="IMq-s6-5Ec" secondAttribute="centerX" id="ECW-cv-OM3"/>
+                            <constraint firstItem="MBi-zT-hYO" firstAttribute="trailing" secondItem="VUm-pD-btN" secondAttribute="trailing" constant="16" id="GXH-H2-cfy"/>
+                            <constraint firstItem="HuG-h7-kAG" firstAttribute="top" secondItem="MBi-zT-hYO" secondAttribute="top" constant="48" id="RFa-Au-wRq"/>
+                            <constraint firstItem="VUm-pD-btN" firstAttribute="leading" secondItem="MBi-zT-hYO" secondAttribute="leading" constant="16" id="Tc3-uG-Oqq"/>
+                            <constraint firstItem="VUm-pD-btN" firstAttribute="top" secondItem="mZn-hJ-cae" secondAttribute="bottom" constant="58" id="UIX-vn-b4K"/>
+                            <constraint firstItem="lvV-Df-Ikb" firstAttribute="leading" secondItem="TF4-ca-eFF" secondAttribute="leading" id="YVw-vK-eX1"/>
+                            <constraint firstItem="MBi-zT-hYO" firstAttribute="trailing" secondItem="jMq-Fl-3dB" secondAttribute="trailing" id="bVX-I3-WZv"/>
+                            <constraint firstItem="jMq-Fl-3dB" firstAttribute="leading" secondItem="MBi-zT-hYO" secondAttribute="leading" id="i15-ea-Z8e"/>
+                            <constraint firstItem="VUm-pD-btN" firstAttribute="top" secondItem="udu-kf-beb" secondAttribute="bottom" constant="8" id="jqg-ZF-Jlg"/>
+                            <constraint firstItem="MBi-zT-hYO" firstAttribute="bottom" secondItem="jMq-Fl-3dB" secondAttribute="bottom" id="oEc-SM-N3D"/>
+                            <constraint firstItem="mZn-hJ-cae" firstAttribute="top" secondItem="HuG-h7-kAG" secondAttribute="bottom" constant="36" id="xEL-UB-Tcx"/>
+                            <constraint firstItem="udu-kf-beb" firstAttribute="leading" secondItem="MBi-zT-hYO" secondAttribute="leading" constant="16" id="zec-6H-Wtr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gue-nE-qHl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9T5-rf-j1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276.8115942028987" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

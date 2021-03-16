@@ -13,9 +13,11 @@ class MapViewController: BaseViewController {
     
     @IBOutlet weak var mapOutlet: MKMapView!
     
+    @IBOutlet weak var switchSegmented: UISegmentedControl!
+    
     let locationManager = CLLocationManager()
     
-    var locations: [MKPointAnnotation] = []
+    let mapManager = MapManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,10 +123,10 @@ class MapViewController: BaseViewController {
 //    }
     
     func setPoint() {
+        // 設定假資料陣列
+        mapManager.setPointArray()
         
-        setPointArray()
-        
-        for annotation in locations {
+        for annotation in mapManager.locations {
             
             DispatchQueue.main.async {
                 
@@ -133,40 +135,7 @@ class MapViewController: BaseViewController {
         }
     }
     
-    func setPointArray() {
-        
-        let school = MKPointAnnotation()
-        
-        school.title = "實踐國小"
-        
-        school.coordinate = CLLocationCoordinate2D(latitude: 24.983413, longitude: 121.558051)
-        
-        school.subtitle = "Max的國小"
-        
-        locations.append(school)
-        
-        
-        let jDSchool = MKPointAnnotation()
-        
-        jDSchool.title = "NTU"
-        
-        jDSchool.coordinate = CLLocationCoordinate2D(latitude: 25.018116, longitude: 121.538293)
-        
-        jDSchool.subtitle = "阿雙的學校"
-        
-        locations.append(jDSchool)
-        
-        let puffOffice = MKPointAnnotation()
-        
-        puffOffice.title = "我愛泡芙人"
-        
-        puffOffice.coordinate = CLLocationCoordinate2D(latitude: 24.994791, longitude: 121.295924)
-        
-        puffOffice.subtitle = "泡芙人的誠信原則 無添加任何防腐劑及香精 大朋友、小朋友都吃的安心的美味甜點"
-        
-        locations.append(puffOffice)
-        
-    }
+    
     // 以台灣中心點顯示整個台灣地圖
     func setMapView() {
         
@@ -200,23 +169,6 @@ class MapViewController: BaseViewController {
              scale.trailingAnchor.constraint(equalTo: button.leadingAnchor, constant: -20),
              scale.centerYAnchor.constraint(equalTo: button.centerYAnchor)]
         )
-    }
-    
-    func openMap(location: CLLocationCoordinate2D, targetName: String?) {
-        
-        let targetLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-        //初始化使用MKPlacemark
-        let targetPlacemark = MKPlacemark(coordinate: targetLocation)
-        
-        let targetItem = MKMapItem(placemark: targetPlacemark)
-        
-        let userMapItem = MKMapItem.forCurrentLocation()
-        
-        let routes = [userMapItem,targetItem]
-        
-        targetItem.name = targetName ?? "我愛泡芙人"
-        
-        MKMapItem.openMaps(with: routes, launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
     }
     
 }
@@ -267,11 +219,6 @@ extension MapViewController: MKMapViewDelegate {
         
         guard let placemark = view.annotation as? MKPointAnnotation else { return }
         
-        openMap(location: placemark.coordinate, targetName: placemark.title)
+        mapManager.openMap(location: placemark.coordinate, targetName: placemark.title)
     }
 }
-
-/*
- 1. 導航好了，但是導航點的 name 會顯示 unknow location
- 2. 自己的位置我還是沒辦法換成預設的藍色點點，會吃到我自定義的圖片
- */
