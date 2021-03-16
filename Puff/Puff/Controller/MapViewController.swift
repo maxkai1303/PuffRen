@@ -57,24 +57,21 @@ class MapViewController: BaseViewController {
         locationManager.stopUpdatingLocation()
     }
     
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
-        switch manager.authorizationStatus {
-        
+        switch status {
+    
         case .authorizedAlways, .authorizedWhenInUse:
-            
+        
             print("使用者同意了")
-            
+        
             locationManager.startUpdatingLocation()
             
         case .denied:
             
-            let alertController = UIAlertController(
-                
-                title: "定位權限已關閉",
-                message:
-                    "如要變更權限，請至 設定 > 隱私權 > 定位服務 開啟 我愛泡芙人 定位",
-                preferredStyle: .alert)
+            let alertController = UIAlertController(title: "定位權限已關閉",
+                                                    message: "如要變更權限，請至 設定 - 隱私權 - 定位服務 開啟 我愛泡芙人 定位",
+                                                    preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "確認", style: .default, handler:nil)
             
@@ -89,6 +86,39 @@ class MapViewController: BaseViewController {
             break
         }
     }
+    
+//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+//        switch manager.authorizationStatus {
+//
+//        case .authorizedAlways, .authorizedWhenInUse:
+//
+//            print("使用者同意了")
+//
+//            locationManager.startUpdatingLocation()
+//
+//        case .denied:
+//
+//            let alertController = UIAlertController(
+//
+//                title: "定位權限已關閉",
+//                message:
+//                    "如要變更權限，請至 設定 > 隱私權 > 定位服務 開啟 我愛泡芙人 定位",
+//                preferredStyle: .alert)
+//
+//            let okAction = UIAlertAction(title: "確認", style: .default, handler:nil)
+//
+//            alertController.addAction(okAction)
+//
+//            self.present(alertController, animated: true, completion: nil)
+//
+//        default:
+//
+//            print("使用者不同意")
+//
+//            break
+//        }
+//    }
     
     func setPoint() {
         

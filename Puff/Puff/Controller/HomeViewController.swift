@@ -32,6 +32,8 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "Navbar"))
+        
+        
     }
 
 }
