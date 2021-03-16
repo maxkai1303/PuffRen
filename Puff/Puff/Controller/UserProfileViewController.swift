@@ -8,8 +8,27 @@
 import UIKit
 
 class UserProfileViewController: BaseViewController {
-
+    
     typealias DataProvider = UserProfileDataProvider
+    
+    typealias SectionHeader = UserProfileDataProvider.SectionHeaderData
+    
+    struct Segue {
+        
+        static let record = "SegueToRecord"
+        
+        static let edit = "SegueToEdit"
+        
+        static let event = "SegueToEvent"
+        
+        static let memberQuickResponseCode = "SegueToMemberQuickResponseCode"
+        
+        static let stateReport = "SegueToStateReport"
+        
+        static let storeRecord = "SegueToStoreRecord"
+        
+        static let storeQuickResponseCode = "SegueToStoreQuickResponseCode"
+    }
     
     @IBOutlet weak var collectionView: UICollectionView! {
         
@@ -22,11 +41,10 @@ class UserProfileViewController: BaseViewController {
             collectionView.registerHeaderNib(reusableView: FeatureHeaderCollectionReusableView.self, type: .header)
         }
     }
+
+    var loginStatus: UserProfileDataProvider.LoginStatus = .member
     
-    override var navigationBarTitle: String {
-        
-        return "會員頁面"
-    }
+    override var navigationBarTitle: String { return "會員頁面" }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,51 +57,65 @@ class UserProfileViewController: BaseViewController {
     }
 }
 
+
+// MARK: - UICollectionView data source
+
 extension UserProfileViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return DataProvider.DataType.allCases.count
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        switch DataProvider.DataType.allCases[section] {
+        if section == 0 { return 1 }
         
-        case .userProfile: return 1
+        switch loginStatus {
         
-        case .memberFeature: return DataProvider.MemberFeature.allCases.count
+        case .member:
             
-        case .storeFeature: return DataProvider.StoreFeature.allCases.count
+            return DataProvider.MemberFeature.allCases.count
             
+        case .store:
+            
+            return DataProvider.StoreFeature.allCases.count
+        
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        switch DataProvider.DataType.allCases[indexPath.section] {
+        // 第一行是 User Profile
         
-        case .userProfile:
+        if indexPath.section == 0 {
             
             let cell = collectionView.reuse(cell: UserProfileCollectionViewCell.self, for: indexPath)
             
             cell.setup()
             
             return cell
+        }
         
-        case .memberFeature(_, let featureNames):
+        // 第一行之外，根據登入狀態輸入 cell 的內容
+        
+        let cell = collectionView.reuse(cell: FeatureCollectionViewCell.self, for: indexPath)
+        
+        switch loginStatus {
+        
+        case .member:
             
-            let cell = collectionView.reuse(cell: FeatureCollectionViewCell.self, for: indexPath)
+            let featureName = DataProvider.MemberFeature.allCases[indexPath.row].rawValue
             
-            cell.setup(name: featureNames[indexPath.row].rawValue)
+            cell.setup(name: featureName)
             
             return cell
             
-        case .storeFeature(_, let featureNames):
+        case .store:
             
-            let cell = collectionView.reuse(cell: FeatureCollectionViewCell.self, for: indexPath)
+            let featureName = DataProvider.StoreFeature.allCases[indexPath.row].rawValue
             
-            cell.setup(name: featureNames[indexPath.row].rawValue)
+            cell.setup(name: featureName)
             
             return cell
         }
@@ -92,32 +124,82 @@ extension UserProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let reusableView = collectionView.reuseView(view: FeatureHeaderCollectionReusableView.self, kind: kind, for: indexPath)
-
-        switch DataProvider.DataType.allCases[indexPath.section] {
         
-        case .userProfile: break
+        // 第一行不需要 Header，之外的透過登入狀態判斷要輸入輸入的資料
+        
+        if indexPath.section != 0 {
             
-        case .memberFeature(let title, _):
+            switch loginStatus {
             
-            reusableView.setup(title)
-            
-        case .storeFeature(let title, _):
-            
-            reusableView.setup(title)
+            case .member: reusableView.setup(DataProvider.MemberFeature.title)
+                
+            case .store: reusableView.setup(DataProvider.StoreFeature.title)
+                
+            }
         }
     
         return reusableView
     }
 }
 
+
+// MARK: - UICollectionView delegate
+
 extension UserProfileViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch loginStatus {
+        
+        case .member:
+            
+            switch DataProvider.MemberFeature.allCases[indexPath.row] {
+                
+            case .record:
+                
+                performSegue(withIdentifier: Segue.record, sender: nil)
+                
+            case .edit:
+                
+                performSegue(withIdentifier: Segue.edit, sender: nil)
+                
+            case .event:
+                
+                performSegue(withIdentifier: Segue.event, sender: nil)
+                
+            case .quickResponseCode:
+                
+                performSegue(withIdentifier: Segue.memberQuickResponseCode, sender: nil)
+            }
+            
+        case .store:
+            
+            switch DataProvider.StoreFeature.allCases[indexPath.row] {
+                
+            case .stateReport:
+                
+                performSegue(withIdentifier: Segue.stateReport, sender: nil)
+                
+            case .recordReport:
+                
+                performSegue(withIdentifier: Segue.storeRecord, sender: nil)
+                
+            case .quickResponseCode:
+                
+                performSegue(withIdentifier: Segue.storeQuickResponseCode, sender: nil)
+            }
+        }
+    }
 }
+
+
+// MARK: - UICollectionView delegate flow layout
 
 extension UserProfileViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
-        switch DataProvider.DataType.allCases[section] {
+        switch DataProvider.SectionHeaderData.allCases[section] {
         
         case .userProfile:
             
@@ -131,7 +213,7 @@ extension UserProfileViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        switch DataProvider.DataType.allCases[indexPath.section] {
+        switch DataProvider.SectionHeaderData.allCases[indexPath.section] {
         
         case .userProfile:
             
