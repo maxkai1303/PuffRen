@@ -42,7 +42,7 @@ class UserProfileViewController: BaseViewController {
         }
     }
 
-    var loginStatus: UserProfileDataProvider.LoginStatus = .store
+    var loginStatus: UserProfileDataProvider.LoginStatus = .member
     
     override var navigationBarTitle: String { return "會員頁面" }
     

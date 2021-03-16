@@ -28,7 +28,6 @@
 		24A58CED25D1300C0058A819 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A58CEC25D1300C0058A819 /* UICollectionView+Extension.swift */; };
 		24A61FB625E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A61FB425E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift */; };
 		24A61FB725E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A61FB525E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib */; };
-		24B15CA625F61DAC003EE16D /* StoreRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CA525F61DAC003EE16D /* StoreRecord.storyboard */; };
 		24B15CAB25F62033003EE16D /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B15CA925F62033003EE16D /* RecordTableViewCell.swift */; };
 		24B15CAC25F62033003EE16D /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CAA25F62033003EE16D /* RecordTableViewCell.xib */; };
 		24B15CB025F620C2003EE16D /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B15CAF25F620C2003EE16D /* CalendarCollectionViewCell.xib */; };
@@ -45,6 +44,8 @@
 		24C1E16D25FF140200DEF1C0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1E16825FF140200DEF1C0 /* Result.swift */; };
 		24C1E16E25FF140200DEF1C0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C1E16925FF140200DEF1C0 /* HTTPClient.swift */; };
 		24CC5B6325E509D00018B542 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC5B6225E509CF0018B542 /* MapKit.framework */; };
+		24F147A52600B00200C63CA8 /* EditMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F147A42600B00200C63CA8 /* EditMemberViewController.swift */; };
+		24F147A82600B01F00C63CA8 /* StoreRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F147A72600B01F00C63CA8 /* StoreRecord.storyboard */; };
 		24F7483125E246E9009CDA35 /* ViewAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */; };
 		24F7485125E2F045009CDA35 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */; };
 		24F7486F25E305CE009CDA35 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7486E25E305CE009CDA35 /* UILabel+Extension.swift */; };
@@ -59,11 +60,9 @@
 		453BD84E25F8B7A200774ECB /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD84D25F8B7A200774ECB /* MapManager.swift */; };
 		453BD85125F8BD8200774ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453BD85025F8BD8200774ECB /* Assets.xcassets */; };
 		453BD8612600642D00774ECB /* EditMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453BD8602600642D00774ECB /* EditMember.storyboard */; };
-		453BD8642600851300774ECB /* EditMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD8632600851300774ECB /* EditMemberViewController.swift */; };
 		453BD869260089B100774ECB /* EditMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD867260089B100774ECB /* EditMemberTableViewCell.swift */; };
 		453BD86A260089B100774ECB /* EditMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453BD868260089B100774ECB /* EditMemberTableViewCell.xib */; };
 		453BD870260092C400774ECB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453BD86F260092C400774ECB /* Login.storyboard */; };
-		453BD8732600930500774ECB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD8722600930500774ECB /* LoginViewController.swift */; };
 		456CC55A25F75C8C002DD35F /* ReprotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CC55925F75C8C002DD35F /* ReprotHeaderView.swift */; };
 		457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457360CA25F4D3C000333749 /* AddCar.storyboard */; };
 		457360D425F4DB8100333749 /* AddCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457360D225F4DB8100333749 /* AddCarTableViewCell.swift */; };
@@ -101,7 +100,6 @@
 		24A58CEC25D1300C0058A819 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		24A61FB425E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		24A61FB525E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
-		24B15CA525F61DAC003EE16D /* StoreRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreRecord.storyboard; sourceTree = "<group>"; };
 		24B15CA925F62033003EE16D /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		24B15CAA25F62033003EE16D /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
 		24B15CAF25F620C2003EE16D /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +116,8 @@
 		24C1E16825FF140200DEF1C0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24C1E16925FF140200DEF1C0 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		24CC5B6225E509CF0018B542 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		24F147A42600B00200C63CA8 /* EditMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMemberViewController.swift; sourceTree = "<group>"; };
+		24F147A72600B01F00C63CA8 /* StoreRecord.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoreRecord.storyboard; sourceTree = "<group>"; };
 		24F7483025E246E9009CDA35 /* ViewAnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimationHelper.swift; sourceTree = "<group>"; };
 		24F7485025E2F045009CDA35 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		24F7486E25E305CE009CDA35 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -132,11 +132,9 @@
 		453BD84D25F8B7A200774ECB /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		453BD85025F8BD8200774ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453BD8602600642D00774ECB /* EditMember.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditMember.storyboard; sourceTree = "<group>"; };
-		453BD8632600851300774ECB /* EditMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditMemberViewController.swift; path = Puff/View/EditMemberViewController.swift; sourceTree = SOURCE_ROOT; };
 		453BD867260089B100774ECB /* EditMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditMemberTableViewCell.swift; path = Puff/View/Nib/Cell/EditMember/EditMemberTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		453BD868260089B100774ECB /* EditMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditMemberTableViewCell.xib; path = Puff/View/Nib/Cell/EditMember/EditMemberTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		453BD86F260092C400774ECB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		453BD8722600930500774ECB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Puff/View/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		456CC55925F75C8C002DD35F /* ReprotHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReprotHeaderView.swift; sourceTree = "<group>"; };
 		457360CA25F4D3C000333749 /* AddCar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCar.storyboard; sourceTree = "<group>"; };
 		457360D225F4DB8100333749 /* AddCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarTableViewCell.swift; sourceTree = "<group>"; };
@@ -220,12 +218,8 @@
 				240D38FF25E3D544008E1C61 /* MapViewController.swift */,
 				457360DA25F51B1900333749 /* AddCarViewController.swift */,
 				45AE40D825F52DF20073BD10 /* ReportViewController.swift */,
-<<<<<<< HEAD
 				24B15CB225F620E9003EE16D /* StoreRecordViewController.swift */,
-=======
-				453BD8722600930500774ECB /* LoginViewController.swift */,
-				453BD8632600851300774ECB /* EditMemberViewController.swift */,
->>>>>>> 7555baad4f3158f40b9439322a20b76e99374d7d
+				24F147A42600B00200C63CA8 /* EditMemberViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +227,7 @@
 		245D328625CD4D3A00726CAA /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				24F147A32600AFD800C63CA8 /* TableViewHeader */,
 				245D328725CD4D5400726CAA /* PFLabel.swift */,
 			);
 			path = Base;
@@ -347,6 +342,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		24F147A32600AFD800C63CA8 /* TableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				456CC55925F75C8C002DD35F /* ReprotHeaderView.swift */,
+			);
+			path = TableViewHeader;
+			sourceTree = "<group>";
+		};
 		24F7482F25E246D4009CDA35 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,19 +374,15 @@
 				248785D425F6103B00CA96F2 /* Calendar */,
 				452BCBC025BEBE4200838E06 /* Nib */,
 				245D328625CD4D3A00726CAA /* Base */,
-				456CC55925F75C8C002DD35F /* ReprotHeaderView.swift */,
 				24B1FA3F25E3C48B00186AB6 /* Main.storyboard */,
 				457360CA25F4D3C000333749 /* AddCar.storyboard */,
 				241B6D2D25C7BD210091643F /* Item.storyboard */,
 				24B1FA3925E3C40100186AB6 /* Map.storyboard */,
 				245D327225CD40E300726CAA /* Report.storyboard */,
 				241B6D3025C7BD630091643F /* Member.storyboard */,
-<<<<<<< HEAD
-				24B15CA525F61DAC003EE16D /* StoreRecord.storyboard */,
-=======
 				453BD86F260092C400774ECB /* Login.storyboard */,
 				453BD8602600642D00774ECB /* EditMember.storyboard */,
->>>>>>> 7555baad4f3158f40b9439322a20b76e99374d7d
+				24F147A72600B01F00C63CA8 /* StoreRecord.storyboard */,
 				24B1FA4725E3C4D000186AB6 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -392,13 +391,9 @@
 		452BCBBF25BEBE3C00838E06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
 				453BD86C260089BE00774ECB /* EditMember */,
 				453BD84A25F76D9100774ECB /* Coupon */,
 				45AE40E325F61DFF0073BD10 /* Report */,
-				248785DF25F610E700CA96F2 /* Calendar */,
->>>>>>> 7555baad4f3158f40b9439322a20b76e99374d7d
 				457360D725F4DB8D00333749 /* AddCar */,
 				248785DF25F610E700CA96F2 /* Calendar */,
 				2420B57325D0FCF80022EDAD /* Home */,
@@ -565,13 +560,9 @@
 				24A61FB725E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib in Resources */,
 				245D329E25D0E5A400726CAA /* ItemCollectionViewCell.xib in Resources */,
 				24B1FA4025E3C48B00186AB6 /* Main.storyboard in Resources */,
-<<<<<<< HEAD
-				24B15CA625F61DAC003EE16D /* StoreRecord.storyboard in Resources */,
-=======
 				453BD85125F8BD8200774ECB /* Assets.xcassets in Resources */,
 				453BD870260092C400774ECB /* Login.storyboard in Resources */,
 				45AE40E125F61DF70073BD10 /* ReportTableViewCell.xib in Resources */,
->>>>>>> 7555baad4f3158f40b9439322a20b76e99374d7d
 				457360D525F4DB8100333749 /* AddCarTableViewCell.xib in Resources */,
 				24B15CAC25F62033003EE16D /* RecordTableViewCell.xib in Resources */,
 				457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */,
@@ -579,6 +570,7 @@
 				24B15CB025F620C2003EE16D /* CalendarCollectionViewCell.xib in Resources */,
 				241B6D2E25C7BD210091643F /* Item.storyboard in Resources */,
 				24B15CBB25F78140003EE16D /* ItemDetailTableViewCell.xib in Resources */,
+				24F147A82600B01F00C63CA8 /* StoreRecord.storyboard in Resources */,
 				2420B57125D0FCF40022EDAD /* HomeTableViewCell.xib in Resources */,
 				24F7488325E31742009CDA35 /* UserProfileCollectionViewCell.xib in Resources */,
 				453BD84825F76D8A00774ECB /* CouponTableViewCell.xib in Resources */,
@@ -612,7 +604,6 @@
 				240DFAB325D1007100AD5350 /* HomeViewController.swift in Sources */,
 				248785DD25F6109A00CA96F2 /* CalendarManager.swift in Sources */,
 				248785DB25F6109A00CA96F2 /* CalendarCollectionViewCell.swift in Sources */,
-				453BD8642600851300774ECB /* EditMemberViewController.swift in Sources */,
 				248785D625F6108B00CA96F2 /* Date+Extension.swift in Sources */,
 				45AE40E025F61DF70073BD10 /* ReportTableViewCell.swift in Sources */,
 				453BD869260089B100774ECB /* EditMemberTableViewCell.swift in Sources */,
@@ -622,6 +613,7 @@
 				456CC55A25F75C8C002DD35F /* ReprotHeaderView.swift in Sources */,
 				245D329225D0E4A100726CAA /* ItemViewController.swift in Sources */,
 				24F7487325E314FF009CDA35 /* UserProfileViewController.swift in Sources */,
+				24F147A52600B00200C63CA8 /* EditMemberViewController.swift in Sources */,
 				24B15CB325F620E9003EE16D /* StoreRecordViewController.swift in Sources */,
 				45AE40D925F52DF20073BD10 /* ReportViewController.swift in Sources */,
 				24A61FB625E31B7E00E05639 /* FeatureHeaderCollectionReusableView.swift in Sources */,
@@ -629,7 +621,6 @@
 				24B15CAB25F62033003EE16D /* RecordTableViewCell.swift in Sources */,
 				24B1FA3125E3AC6300186AB6 /* UserProfileDataProvider.swift in Sources */,
 				240DFAB925D1019500AD5350 /* HomeDataProvider.swift in Sources */,
-				453BD8732600930500774ECB /* LoginViewController.swift in Sources */,
 				457A970525B9465C00A59014 /* SceneDelegate.swift in Sources */,
 				24C1E16B25FF140200DEF1C0 /* APIServices.swift in Sources */,
 				24A58CE525D1289A0058A819 /* BaseViewController.swift in Sources */,
