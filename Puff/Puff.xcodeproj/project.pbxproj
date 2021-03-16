@@ -49,6 +49,10 @@
 		453BD84825F76D8A00774ECB /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453BD84625F76D8A00774ECB /* CouponTableViewCell.xib */; };
 		453BD84E25F8B7A200774ECB /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD84D25F8B7A200774ECB /* MapManager.swift */; };
 		453BD85125F8BD8200774ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453BD85025F8BD8200774ECB /* Assets.xcassets */; };
+		453BD8612600642D00774ECB /* EditMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453BD8602600642D00774ECB /* EditMember.storyboard */; };
+		453BD8642600851300774ECB /* EditMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD8632600851300774ECB /* EditMemberViewController.swift */; };
+		453BD869260089B100774ECB /* EditMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BD867260089B100774ECB /* EditMemberTableViewCell.swift */; };
+		453BD86A260089B100774ECB /* EditMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453BD868260089B100774ECB /* EditMemberTableViewCell.xib */; };
 		456CC55A25F75C8C002DD35F /* ReprotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CC55925F75C8C002DD35F /* ReprotHeaderView.swift */; };
 		457360CB25F4D3C000333749 /* AddCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457360CA25F4D3C000333749 /* AddCar.storyboard */; };
 		457360D425F4DB8100333749 /* AddCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457360D225F4DB8100333749 /* AddCarTableViewCell.swift */; };
@@ -107,6 +111,10 @@
 		453BD84625F76D8A00774ECB /* CouponTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CouponTableViewCell.xib; path = Puff/View/Nib/Cell/Coupon/CouponTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		453BD84D25F8B7A200774ECB /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		453BD85025F8BD8200774ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		453BD8602600642D00774ECB /* EditMember.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditMember.storyboard; sourceTree = "<group>"; };
+		453BD8632600851300774ECB /* EditMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditMemberViewController.swift; path = Puff/View/EditMemberViewController.swift; sourceTree = SOURCE_ROOT; };
+		453BD867260089B100774ECB /* EditMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditMemberTableViewCell.swift; path = Puff/View/Nib/Cell/EditMember/EditMemberTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		453BD868260089B100774ECB /* EditMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditMemberTableViewCell.xib; path = Puff/View/Nib/Cell/EditMember/EditMemberTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		456CC55925F75C8C002DD35F /* ReprotHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReprotHeaderView.swift; sourceTree = "<group>"; };
 		457360CA25F4D3C000333749 /* AddCar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCar.storyboard; sourceTree = "<group>"; };
 		457360D225F4DB8100333749 /* AddCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 				240D38FF25E3D544008E1C61 /* MapViewController.swift */,
 				457360DA25F51B1900333749 /* AddCarViewController.swift */,
 				45AE40D825F52DF20073BD10 /* ReportViewController.swift */,
+				453BD8632600851300774ECB /* EditMemberViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 				24B1FA3925E3C40100186AB6 /* Map.storyboard */,
 				245D327225CD40E300726CAA /* Report.storyboard */,
 				241B6D3025C7BD630091643F /* Member.storyboard */,
+				453BD8602600642D00774ECB /* EditMember.storyboard */,
 				24B1FA4725E3C4D000186AB6 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -327,6 +337,7 @@
 		452BCBBF25BEBE3C00838E06 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				453BD86C260089BE00774ECB /* EditMember */,
 				453BD84A25F76D9100774ECB /* Coupon */,
 				45AE40E325F61DFF0073BD10 /* Report */,
 				248785DF25F610E700CA96F2 /* Calendar */,
@@ -354,6 +365,15 @@
 				453BD84625F76D8A00774ECB /* CouponTableViewCell.xib */,
 			);
 			path = Coupon;
+			sourceTree = "<group>";
+		};
+		453BD86C260089BE00774ECB /* EditMember */ = {
+			isa = PBXGroup;
+			children = (
+				453BD867260089B100774ECB /* EditMemberTableViewCell.swift */,
+				453BD868260089B100774ECB /* EditMemberTableViewCell.xib */,
+			);
+			path = EditMember;
 			sourceTree = "<group>";
 		};
 		457360D725F4DB8D00333749 /* AddCar */ = {
@@ -481,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				241B6D3125C7BD630091643F /* Member.storyboard in Resources */,
+				453BD86A260089B100774ECB /* EditMemberTableViewCell.xib in Resources */,
 				24F7488825E31750009CDA35 /* FeatureCollectionViewCell.xib in Resources */,
 				24A61FB725E31B7E00E05639 /* FeatureHeaderCollectionReusableView.xib in Resources */,
 				24F7486B25E2FC12009CDA35 /* ItemDetailTableViewCell.xib in Resources */,
@@ -496,6 +517,7 @@
 				24F7488325E31742009CDA35 /* UserProfileCollectionViewCell.xib in Resources */,
 				453BD84825F76D8A00774ECB /* CouponTableViewCell.xib in Resources */,
 				245D327325CD40E300726CAA /* Report.storyboard in Resources */,
+				453BD8612600642D00774ECB /* EditMember.storyboard in Resources */,
 				24B1FA3A25E3C40100186AB6 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,8 +541,10 @@
 				240DFAB325D1007100AD5350 /* HomeViewController.swift in Sources */,
 				248785DD25F6109A00CA96F2 /* CalendarManager.swift in Sources */,
 				248785DB25F6109A00CA96F2 /* CalendarCollectionViewCell.swift in Sources */,
+				453BD8642600851300774ECB /* EditMemberViewController.swift in Sources */,
 				248785D625F6108B00CA96F2 /* Date+Extension.swift in Sources */,
 				45AE40E025F61DF70073BD10 /* ReportTableViewCell.swift in Sources */,
+				453BD869260089B100774ECB /* EditMemberTableViewCell.swift in Sources */,
 				452BCBB925BEBD2B00838E06 /* UITableView+Extension.swift in Sources */,
 				453BD84725F76D8A00774ECB /* CouponTableViewCell.swift in Sources */,
 				453BD84E25F8B7A200774ECB /* MapManager.swift in Sources */,
